@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  background-color: rgb(126, 125, 125);
+  margin-left: 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+nav .navbar-items {
+  color: azure;
+  display: flex;
+  list-style-type: none;
+}
+
+nav .navbar-items li {
+  margin-right: 1em;
+  font-size: 1.3em;
+}
+
+.menu-btn {
+  margin: 1em;
+  font-size: 1.3em;
+}

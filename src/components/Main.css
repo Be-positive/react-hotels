@@ -1,0 +1,122 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main form .myComment img {
+  margin-right: 0.75em;
+  margin-bottom: 1.5em;
+}
+
+main form .btn-comments {
+  margin-left: 3.3em;
+}
+
+main form #new-comment {
+  margin-top: 1em;
+}
+
+main form #new-comment div {
+  margin-top: 2.3em;
+}
+
+main form #new-comment div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main form #new-comment div div img {
+  border-radius: 20%;
+  margin-right: 0.5em;
+  width: 40px;
+  height: 50px;
+}
+
+main form #new-comment div div h5 {
+  margin-top: 1em;
+}
+
+main form #new-comment div h4 {
+  margin-top: 0.75em;
+  color: #555554;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main form .oldComments .oldOld {
+  margin-bottom: 0.5em;
+}
+
+main form .oldComments .oldOld .oldComment {
+  margin-top: -0.5em;
+  color: #555554;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main form .oldComments .oldOld div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main form .oldComments .oldOld div h5 {
+  margin-top: 2.5em;
+}
+
+main .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 25em;
+}
+
+main .likes .btn2 {
+  margin-top: 1em;
+  height: 25px;
+  margin-right: 0.2em;
+  background-color: #f9fcfb;
+  border-radius: 10px;
+  margin-left: 1.5em;
+}
+
+main .likes .btn {
+  margin-top: 1em;
+  height: 25px;
+  margin-right: 0.2em;
+  background-color: #fbffff;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=Main.css.map */

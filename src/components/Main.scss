@@ -1,0 +1,82 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  form {
+    display: flex;
+    flex-direction: column;
+    .myComment {
+      img {
+        margin-right: 0.75em;
+        margin-bottom: 1.9em;
+      }
+    }
+    .btn-comments {
+      margin-left: 3.3em;
+    }
+    #new-comment {
+      margin-top: 1em;
+      div {
+        margin-top: 2.3em;
+        div {
+          display: flex;
+          flex-direction: row;
+          img {
+            border-radius: 20%;
+            margin-right: 0.5em;
+            width: 40px;
+            height: 50px;
+          }
+          h5 {
+            margin-top: 1em;
+          }
+        }
+        h4 {
+          margin-top: 0.75em;
+          color: rgb(85, 85, 84);
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        }
+      }
+    }
+    .oldComments {
+      .oldOld {
+        margin-bottom: 0.5em;
+        .oldComment {
+          margin-top: -0.5em;
+          color: rgb(85, 85, 84);
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          h5 {
+            margin-top: 2.5em;
+          }
+        }
+      }
+    }
+  }
+  .likes {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25em;
+    .btn2 {
+      margin-top: 1em;
+      height: 25px;
+      margin-right: 0.2em;
+      background-color: rgb(249, 252, 251);
+      border-radius: 10px;
+      margin-left: 1.5em;
+    }
+    .btn {
+      margin-top: 1em;
+      height: 25px;
+      margin-right: 0.2em;
+      background-color: rgb(251, 255, 255);
+      border-radius: 10px;
+    }
+  }
+}
