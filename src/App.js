@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Main from './components/Main'
+import Countries from './components/Countries';
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <Navbar />
       
       <Main />
+
+      <Countries/>
       
 
       

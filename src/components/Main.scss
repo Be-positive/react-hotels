@@ -1,15 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  h2 {
+    font-family: "Poppins";
+  }
+
   form {
+    margin-right: 21em;
+    margin-left: 21.5em;
     display: flex;
     flex-direction: column;
     .myComment {
       img {
         margin-right: 0.75em;
         margin-bottom: 1.9em;
+      }
+      textarea {
+        width: 50em;
+        height: 5.5em;
       }
     }
     .btn-comments {
@@ -30,6 +43,11 @@ main {
           }
           h5 {
             margin-top: 1em;
+            i {
+              margin-left: 1em;
+              cursor: pointer;
+              color: rgb(67, 117, 63);
+            }
           }
         }
         h4 {
@@ -54,6 +72,11 @@ main {
           flex-direction: row;
           h5 {
             margin-top: 2.5em;
+            #closeCom {
+              margin-left: 1em;
+              cursor: pointer;
+              color: rgb(67, 117, 63);
+            }
           }
         }
       }
@@ -62,7 +85,7 @@ main {
   .likes {
     display: flex;
     flex-direction: row;
-    margin-right: 25em;
+    margin-right: 46.5em;
     .btn2 {
       margin-top: 1em;
       height: 25px;
@@ -77,6 +100,156 @@ main {
       margin-right: 0.2em;
       background-color: rgb(251, 255, 255);
       border-radius: 10px;
+    }
+  }
+}
+
+.hideMyComment {
+  display: none;
+}
+
+@media only screen and (max-width: 1422px) {
+  main {
+    #comments {
+      margin-right: 15em;
+      margin-left: 13.5em;
+      .myComment {
+        textarea {
+          width: 45em;
+          height: 5.5em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1170px) {
+  main {
+    #comments {
+      margin-right: 12em;
+      margin-left: 6em;
+      .myComment {
+        textarea {
+          width: 47em;
+          height: 5.5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  main {
+    .mainImage {
+      width: 800px;
+      height: 410px;
+    }
+    .likes {
+      margin-right: 36.5em;
+    }
+    #comments {
+      margin-right: 8em;
+      margin-left: 6.5em;
+      .myComment {
+        textarea {
+          width: 40em;
+          height: 5.5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  main {
+    .mainImage {
+      width: 670px;
+      height: 350px;
+    }
+    .likes {
+      margin-right: 28.5em;
+    }
+    #comments {
+      margin-right: 3em;
+      margin-left: 5em;
+      .myComment {
+        textarea {
+          width: 37em;
+          height: 5.5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    .mainImage {
+      width: 600px;
+      height: 300px;
+    }
+    .likes {
+      margin-right: 24em;
+    }
+    #comments {
+      margin-right: 2em;
+      margin-left: 2.5em;
+      .myComment {
+        img {
+          margin-bottom: 1.4em;
+        }
+        textarea {
+          width: 30em;
+          height: 5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main {
+    .mainImage {
+      width: 520px;
+      height: 280px;
+    }
+    .likes {
+      margin-right: 19em;
+    }
+    #comments {
+      margin-right: 1em;
+      margin-left: 2.5em;
+      .myComment {
+        img {
+          margin-bottom: 1.4em;
+        }
+        textarea {
+          width: 30em;
+          height: 5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main {
+    .mainImage {
+      width: 460px;
+      height: 255px;
+    }
+    .likes {
+      margin-right: 15.3em;
+    }
+    #comments {
+      margin-right: 1em;
+      margin-left: 1em;
+
+      .myComment {
+        textarea {
+          width: 29em;
+          height: 5em;
+        }
+      }
     }
   }
 }
