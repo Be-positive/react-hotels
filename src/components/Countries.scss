@@ -1,6 +1,121 @@
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  h2 {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countries {
+    list-style-type: none;
+
+    display: grid;
+
+    flex-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1%));
+    gap: 0rem 1rem;
+    margin-right: 35em;
+    margin-left: -21em;
+
+    li {
+      width: 100%;
+      background: rgb(245, 242, 242);
+      /* padding: 2rem 2rem; */
+      border: 0.1em solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1em 1em 0em 1em;
+
+      div {
+        img {
+          width: 50px;
+          height: 40px;
+          margin: 1em 0em 0em 0.4em;
+          /* margin-right: 1rem; */
+        }
+        h4 {
+          margin-bottom: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  main {
+    .countries {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1%));
+      gap: 0rem 0rem;
+      margin-right: 36em;
+      margin-left: -12.5em;
+      li {
+        width: 80%;
+        background: rgb(245, 242, 242);
+        /* padding: 2rem 2rem; */
+        border: 0.1em solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 1em 0em 1em;
+
+        div {
+          img {
+            width: 50px;
+            height: 40px;
+            margin: 1em 0em 0em 0.4em;
+            /* margin-right: 1rem; */
+          }
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  main {
+    .countries {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 20%));
+
+      margin-right: 21em;
+      margin-left: -8.5em;
+      li {
+        width: 80%;
+        background: rgb(245, 242, 242);
+        /* padding: 2rem 2rem; */
+        border: 0.1em solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 1em 0em 1em;
+
+        div {
+          img {
+            width: 50px;
+            height: 40px;
+            margin: 1em 0em 0em 0.4em;
+            /* margin-right: 1rem; */
+          }
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main {
+    .countries {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 25%));
+
+      margin-right: 15em;
+      margin-left: -8.5em;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +15,13 @@ main {
           flex-direction: column;
 }
 
+main h2 {
+  font-family: "Poppins";
+}
+
 main form {
+  margin-right: 21em;
+  margin-left: 21.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +33,12 @@ main form {
 
 main form .myComment img {
   margin-right: 0.75em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.9em;
+}
+
+main form .myComment textarea {
+  width: 50em;
+  height: 5.5em;
 }
 
 main form .btn-comments {
@@ -62,6 +74,12 @@ main form #new-comment div div h5 {
   margin-top: 1em;
 }
 
+main form #new-comment div div h5 i {
+  margin-left: 1em;
+  cursor: pointer;
+  color: #43753f;
+}
+
 main form #new-comment div h4 {
   margin-top: 0.75em;
   color: #555554;
@@ -92,6 +110,12 @@ main form .oldComments .oldOld div h5 {
   margin-top: 2.5em;
 }
 
+main form .oldComments .oldOld div h5 #closeCom {
+  margin-left: 1em;
+  cursor: pointer;
+  color: #43753f;
+}
+
 main .likes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,7 +124,7 @@ main .likes {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-right: 25em;
+  margin-right: 46.5em;
 }
 
 main .likes .btn2 {
@@ -118,5 +142,127 @@ main .likes .btn {
   margin-right: 0.2em;
   background-color: #fbffff;
   border-radius: 10px;
+}
+
+.hideMyComment {
+  display: none;
+}
+
+@media only screen and (max-width: 1422px) {
+  main #comments {
+    margin-right: 15em;
+    margin-left: 13.5em;
+  }
+  main #comments .myComment textarea {
+    width: 45em;
+    height: 5.5em;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  main #comments {
+    margin-right: 12em;
+    margin-left: 6em;
+  }
+  main #comments .myComment textarea {
+    width: 47em;
+    height: 5.5em;
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  main .mainImage {
+    width: 800px;
+    height: 410px;
+  }
+  main .likes {
+    margin-right: 36.5em;
+  }
+  main #comments {
+    margin-right: 8em;
+    margin-left: 6.5em;
+  }
+  main #comments .myComment textarea {
+    width: 40em;
+    height: 5.5em;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  main .mainImage {
+    width: 670px;
+    height: 350px;
+  }
+  main .likes {
+    margin-right: 28.5em;
+  }
+  main #comments {
+    margin-right: 3em;
+    margin-left: 5em;
+  }
+  main #comments .myComment textarea {
+    width: 37em;
+    height: 5.5em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main .mainImage {
+    width: 600px;
+    height: 300px;
+  }
+  main .likes {
+    margin-right: 24em;
+  }
+  main #comments {
+    margin-right: 2em;
+    margin-left: 2.5em;
+  }
+  main #comments .myComment img {
+    margin-bottom: 1.4em;
+  }
+  main #comments .myComment textarea {
+    width: 30em;
+    height: 5em;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main .mainImage {
+    width: 520px;
+    height: 280px;
+  }
+  main .likes {
+    margin-right: 19em;
+  }
+  main #comments {
+    margin-right: 1em;
+    margin-left: 2.5em;
+  }
+  main #comments .myComment img {
+    margin-bottom: 1.4em;
+  }
+  main #comments .myComment textarea {
+    width: 30em;
+    height: 5em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main .mainImage {
+    width: 460px;
+    height: 255px;
+  }
+  main .likes {
+    margin-right: 15.3em;
+  }
+  main #comments {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  main #comments .myComment textarea {
+    width: 29em;
+    height: 5em;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

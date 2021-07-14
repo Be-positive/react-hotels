@@ -79,12 +79,6 @@ const UseStateMain = () => {
         }
         textArea.value = "";
         
-        
-/*         const randomNum = Math.floor((Math.random() * 9999) + 1)
-        div1.id = randomNum        
-        console.dir(h5) */
-        
-
         //you can append smth before div, using insertBefore() methods, but it's more complicated
         //because even if you have child before, you print each time before this child
         // but you need -> any child needs appendent before this new append child! and so on

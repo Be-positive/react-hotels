@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Countries.scss';
+
+const url = "https://restcountries.eu/rest/v2/all"
 
 const useEffectCountries = () => {
 
-    /* const Api = "https://restcountries.eu/rest/v2/all" */
+    
 /*     const data = [
         { id: 1, name: 'john' },
         { id: 2, name: 'peter' },
@@ -18,14 +20,41 @@ const useEffectCountries = () => {
         setPeople(newPeople);
     }; */
 
+    const [country, setCountry] = useState([]);
+
+  const getUsers = async () => {
+    const response = await fetch(url);
+    const country = await response.json();
+    setCountry(country);
+    // console.log(users);
+  };
+  useEffect(() => {
+    getUsers();
+  }, []);
+
     
 
     return (
 
         <>
         <main>
-            <h2>Countries and top Hotels</h2>
-            
+            <h2>Top hotels in South-Eastern Asia</h2>
+            <ul className='countries'>
+                {country.map((user) => {
+                     const { name, area, flag, subregion} = user;
+                     if(subregion === "South-Eastern Asia" && name.length < 10){
+                        return (
+                            <li key={area}>
+                            <div>
+                                <img src={flag} alt="" width="50px" height="40px" />
+                                <h4>{name}</h4>
+                                
+                            </div>
+                            </li>
+                        );
+                    }                     
+                })}
+            </ul>
 
         </main>
         
