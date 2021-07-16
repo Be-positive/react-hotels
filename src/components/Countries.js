@@ -26,18 +26,16 @@ const useEffectCountries = () => {
   }   
   
   const hotelsPrice = (e) => {
-    e.preventDefault();                
+    e.preventDefault();                    
     let hotels = document.getElementById('hotelList')
     if(hotels.style.display === "none"){
         return showUp()
     } else {
         return hide()
     }
-}
+  }
   
-    
-
-    return (
+   return (
 
         <>
         <main>
@@ -68,7 +66,7 @@ const useEffectCountries = () => {
             <div className="btnHotels">
               <button onClick={hotelsPrice}>Hotels and Prices</button>
             </div>
-            <div id="hotelList">
+            <div id="hotelList"  style={{display:'none'}}>
               <ul>
                 <li>
                   <h3>Brunei Darussalam</h3>
