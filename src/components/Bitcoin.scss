@@ -1,0 +1,19 @@
+.bitcoinHead {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+  h2 {
+    span {
+      a {
+        color: rgb(212, 192, 78);
+      }
+    }
+  }
+  h3 {
+    margin-top: -0.8em;
+  }
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}

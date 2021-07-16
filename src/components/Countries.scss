@@ -8,14 +8,13 @@ main {
 
   .countries {
     list-style-type: none;
-
     display: grid;
 
     flex-flow: column;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1%));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 17%));
     gap: 0rem 1rem;
-    margin-right: 35em;
-    margin-left: -21em;
+    justify-content: center;
+    margin-right: 4.2em;
 
     li {
       width: 100%;
@@ -37,6 +36,61 @@ main {
         h4 {
           margin-bottom: 1rem;
           cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .btnHotels {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: 0.5em;
+      color: white;
+      font-size: 1em;
+      background-color: black;
+      cursor: pointer;
+      &:hover {
+        color: rgb(212, 192, 78);
+      }
+    }
+  }
+  #hotelList {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    ul {
+      list-style-type: none;
+      display: grid;
+      flex-flow: column;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 28%));
+      gap: 1rem 1rem;
+      justify-content: center;
+      margin-right: 1em;
+
+      li {
+        margin-top: -0.5em;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        width: 100%;
+        background: rgb(245, 242, 242);
+        justify-content: center;
+        p {
+          span {
+            color: rgb(212, 192, 78);
+          }
+        }
+      }
+    }
+    h4 {
+      margin-top: 0em;
+      a {
+        color: rgb(15, 15, 13);
+        &:hover {
+          text-decoration: none;
         }
       }
     }
@@ -46,12 +100,11 @@ main {
 @media only screen and (max-width: 1170px) {
   main {
     .countries {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1%));
-      gap: 0rem 0rem;
-      margin-right: 36em;
-      margin-left: -12.5em;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 17%));
+      gap: 0rem 1rem;
+      margin-right: 3em;
       li {
-        width: 80%;
+        width: 100%;
         background: rgb(245, 242, 242);
         /* padding: 2rem 2rem; */
         border: 0.1em solid black;
@@ -71,6 +124,13 @@ main {
             margin-bottom: 1rem;
           }
         }
+      }
+    }
+    #hotelList {
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(275px, 28%));
+        gap: 1rem 0rem;
+        margin-right: 2em;
       }
     }
   }
@@ -80,14 +140,12 @@ main {
   main {
     .countries {
       grid-template-columns: repeat(auto-fit, minmax(110px, 20%));
+      gap: 0rem 0rem;
+      margin-right: 3em;
 
-      margin-right: 21em;
-      margin-left: -8.5em;
       li {
         width: 80%;
         background: rgb(245, 242, 242);
-        /* padding: 2rem 2rem; */
-        border: 0.1em solid black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -106,16 +164,26 @@ main {
         }
       }
     }
+    #hotelList {
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 40%));
+        gap: 0rem 0.5rem;
+        margin-right: 2em;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 630px) {
   main {
     .countries {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 25%));
-
-      margin-right: 15em;
-      margin-left: -8.5em;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 22%));
+    }
+    #hotelList {
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 40%));
+        gap: 0rem 0rem;
+      }
     }
   }
 }

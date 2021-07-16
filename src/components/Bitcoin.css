@@ -1,0 +1,26 @@
+.bitcoinHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2em;
+}
+
+.bitcoinHead h2 span a {
+  color: #d4c04e;
+}
+
+.bitcoinHead h3 {
+  margin-top: -0.8em;
+}
+
+.bitcoinHead p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*# sourceMappingURL=Bitcoin.css.map */

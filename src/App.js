@@ -2,8 +2,9 @@ import React from 'react';
 
 import './App.css';
 import Navbar from './components/Navbar';
-import Main from './components/Main'
+import Header from './components/Header'
 import Countries from './components/Countries';
+import Bitcoin from './components/Bitcoin'
 
 
 function App() {
@@ -11,10 +12,11 @@ function App() {
     <div>
       <Navbar />
       
-      <Main />
+      <Header />
 
       <Countries/>
-      
+
+      <Bitcoin />      
 
       
     </div>

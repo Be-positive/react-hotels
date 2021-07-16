@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-main {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,13 +13,14 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2em;
 }
 
-main h2 {
+header h2 {
   font-family: "Poppins";
 }
 
-main form {
+header form {
   margin-right: 21em;
   margin-left: 21.5em;
   display: -webkit-box;
@@ -31,29 +32,29 @@ main form {
           flex-direction: column;
 }
 
-main form .myComment img {
+header form .myComment img {
   margin-right: 0.75em;
   margin-bottom: 1.9em;
 }
 
-main form .myComment textarea {
+header form .myComment textarea {
   width: 50em;
   height: 5.5em;
 }
 
-main form .btn-comments {
+header form .btn-comments {
   margin-left: 3.3em;
 }
 
-main form #new-comment {
+header form #new-comment {
   margin-top: 1em;
 }
 
-main form #new-comment div {
+header form #new-comment div {
   margin-top: 2.3em;
 }
 
-main form #new-comment div div {
+header form #new-comment div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,40 +64,40 @@ main form #new-comment div div {
           flex-direction: row;
 }
 
-main form #new-comment div div img {
+header form #new-comment div div img {
   border-radius: 20%;
   margin-right: 0.5em;
   width: 40px;
   height: 50px;
 }
 
-main form #new-comment div div h5 {
+header form #new-comment div div h5 {
   margin-top: 1em;
 }
 
-main form #new-comment div div h5 i {
+header form #new-comment div div h5 i {
   margin-left: 1em;
   cursor: pointer;
   color: #43753f;
 }
 
-main form #new-comment div h4 {
+header form #new-comment div h4 {
   margin-top: 0.75em;
   color: #555554;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-main form .oldComments .oldOld {
+header form .oldComments .oldOld {
   margin-bottom: 0.5em;
 }
 
-main form .oldComments .oldOld .oldComment {
+header form .oldComments .oldOld .oldComment {
   margin-top: -0.5em;
   color: #555554;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-main form .oldComments .oldOld div {
+header form .oldComments .oldOld div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,17 +107,17 @@ main form .oldComments .oldOld div {
           flex-direction: row;
 }
 
-main form .oldComments .oldOld div h5 {
+header form .oldComments .oldOld div h5 {
   margin-top: 2.5em;
 }
 
-main form .oldComments .oldOld div h5 #closeCom {
+header form .oldComments .oldOld div h5 #closeCom {
   margin-left: 1em;
   cursor: pointer;
   color: #43753f;
 }
 
-main .likes {
+header .likes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +128,7 @@ main .likes {
   margin-right: 46.5em;
 }
 
-main .likes .btn2 {
+header .likes .btn2 {
   margin-top: 1em;
   height: 25px;
   margin-right: 0.2em;
@@ -136,7 +137,7 @@ main .likes .btn2 {
   margin-left: 1.5em;
 }
 
-main .likes .btn {
+header .likes .btn {
   margin-top: 1em;
   height: 25px;
   margin-right: 0.2em;
@@ -149,120 +150,120 @@ main .likes .btn {
 }
 
 @media only screen and (max-width: 1422px) {
-  main #comments {
+  header #comments {
     margin-right: 15em;
     margin-left: 13.5em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 45em;
     height: 5.5em;
   }
 }
 
 @media only screen and (max-width: 1170px) {
-  main #comments {
+  header #comments {
     margin-right: 12em;
     margin-left: 6em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 47em;
     height: 5.5em;
   }
 }
 
 @media only screen and (max-width: 1028px) {
-  main .mainImage {
+  header .mainImage {
     width: 800px;
     height: 410px;
   }
-  main .likes {
+  header .likes {
     margin-right: 36.5em;
   }
-  main #comments {
+  header #comments {
     margin-right: 8em;
     margin-left: 6.5em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 40em;
     height: 5.5em;
   }
 }
 
 @media only screen and (max-width: 840px) {
-  main .mainImage {
+  header .mainImage {
     width: 670px;
     height: 350px;
   }
-  main .likes {
+  header .likes {
     margin-right: 28.5em;
   }
-  main #comments {
+  header #comments {
     margin-right: 3em;
     margin-left: 5em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 37em;
     height: 5.5em;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  main .mainImage {
+  header .mainImage {
     width: 600px;
     height: 300px;
   }
-  main .likes {
+  header .likes {
     margin-right: 24em;
   }
-  main #comments {
+  header #comments {
     margin-right: 2em;
     margin-left: 2.5em;
   }
-  main #comments .myComment img {
+  header #comments .myComment img {
     margin-bottom: 1.4em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 30em;
     height: 5em;
   }
 }
 
 @media only screen and (max-width: 630px) {
-  main .mainImage {
+  header .mainImage {
     width: 520px;
     height: 280px;
   }
-  main .likes {
+  header .likes {
     margin-right: 19em;
   }
-  main #comments {
+  header #comments {
     margin-right: 1em;
     margin-left: 2.5em;
   }
-  main #comments .myComment img {
+  header #comments .myComment img {
     margin-bottom: 1.4em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 30em;
     height: 5em;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  main .mainImage {
+  header .mainImage {
     width: 460px;
     height: 255px;
   }
-  main .likes {
+  header .likes {
     margin-right: 15.3em;
   }
-  main #comments {
+  header #comments {
     margin-right: 1em;
     margin-left: 1em;
   }
-  main #comments .myComment textarea {
+  header #comments .myComment textarea {
     width: 29em;
     height: 5em;
   }
 }
-/*# sourceMappingURL=Main.css.map */
+/*# sourceMappingURL=Header.css.map */

@@ -5,7 +5,7 @@ import Image3 from './images/Ksenia.jpg';
 import Image4 from './images/Jone.jpg';
 import Image5 from './images/Mathew.jpg';
 /* import './Main.css';  */
-import './Main.scss'; 
+import './Header.scss'; 
 
 const UseStateMain = () => {
     const[like, setLike] = useState(665)
@@ -110,7 +110,7 @@ const UseStateMain = () => {
           
     return (
         
-        <main>
+        <header>
             <h2>SONEVA KIRI THAILAND</h2>
             <img className = "mainImage" src={Image1} alt="" /* height='400px' width='620px' */ />
             <div className='likes'>
@@ -144,7 +144,7 @@ const UseStateMain = () => {
                </div>             
             </form>                   
                                                          
-        </main>
+        </header>
     )
 }
 

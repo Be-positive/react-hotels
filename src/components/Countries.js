@@ -3,35 +3,38 @@ import './Countries.scss';
 
 const url = "https://restcountries.eu/rest/v2/all"
 
-const useEffectCountries = () => {
+const useEffectCountries = () => {   
 
-    
-/*     const data = [
-        { id: 1, name: 'john' },
-        { id: 2, name: 'peter' },
-        { id: 3, name: 'susan' },
-        { id: 4, name: 'anna' },
-      ];
-    const [people, setPeople] = React.useState(data);
+  const [country, setCountry] = useState([]);
 
-    const removeItem = (id) => {
-        let newPeople = people.filter((person) => person.id !== id);
-        console.log(people)
-        setPeople(newPeople);
-    }; */
-
-    const [country, setCountry] = useState([]);
-
-  const getUsers = async () => {
+  const getCountries = async () => {
     const response = await fetch(url);
     const country = await response.json();
-    setCountry(country);
-    // console.log(users);
+    setCountry(country);    
   };
   useEffect(() => {
-    getUsers();
+    getCountries();
   }, []);
 
+  const showUp  = () => {                
+    let hotels = document.getElementById('hotelList')
+    hotels.style.display="flex";
+  }  
+  const hide  = () => {                       
+    let hotels = document.getElementById('hotelList')
+    hotels.style.display="none";    
+  }   
+  
+  const hotelsPrice = (e) => {
+    e.preventDefault();                
+    let hotels = document.getElementById('hotelList')
+    if(hotels.style.display === "none"){
+        return showUp()
+    } else {
+        return hide()
+    }
+}
+  
     
 
     return (
@@ -40,11 +43,18 @@ const useEffectCountries = () => {
         <main>
             <h2>Top hotels in South-Eastern Asia</h2>
             <ul className='countries'>
+                {/* {country.filter( country => country.subregion  === "South-Eastern Asia" && name.length < 10)} */}
                 {country.map((user) => {
                      const { name, area, flag, subregion} = user;
-                     if(subregion === "South-Eastern Asia" && name.length < 10){
-                        return (
-                            <li key={area}>
+                     if(subregion === "South-Eastern Asia" && name.length <= 20){
+                      /* let takeId = Math.floor(Math.random() * 999) + 1 */
+                      /* let takeId = () => {
+                        for (let i=0; i<=7; i++){
+                        return i;
+                        }
+                      } */
+                        return (                            
+                            <li key={area} /* id={takeId} */>
                             <div>
                                 <img src={flag} alt="" width="50px" height="40px" />
                                 <h4>{name}</h4>
@@ -52,9 +62,83 @@ const useEffectCountries = () => {
                             </div>
                             </li>
                         );
-                    }                     
+                    } return null                    
                 })}
             </ul>
+            <div className="btnHotels">
+              <button onClick={hotelsPrice}>Hotels and Prices</button>
+            </div>
+            <div id="hotelList">
+              <ul>
+                <li>
+                  <h3>Brunei Darussalam</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Cambodia</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Indonesia</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Malaysia</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Myanmar</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Philippines</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Singapore</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Thailand</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Timor-Leste</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+                <li>
+                  <h3>Viet Nam</h3>
+                  <p> Shinta Mani Wild <span>(2000$)</span></p>
+                  <p> Zannier Hotels Phum Baitang <span>($250)</span></p>
+                  <p> Song Saa Private Island <span>(900$)</span></p>
+                </li>
+
+              </ul>           
+              
+              <h4>
+                 <a target="_blank" rel="noreferrer" href="https://theluxurytravelexpert.com/">The Best hotels by Luxury Travel Expert </a>
+              </h4>
+            </div>
+            
+            
 
         </main>
         
