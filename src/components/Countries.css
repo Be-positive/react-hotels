@@ -9,6 +9,7 @@ main h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Gotham-light", Arial, sans-serif;
 }
 
 main .countries {
@@ -29,6 +30,7 @@ main .countries {
 }
 
 main .countries li {
+  font-family: "Gotham-light", Arial, sans-serif;
   width: 100%;
   background: #f5f2f2;
   /* padding: 2rem 2rem; */
@@ -72,14 +74,14 @@ main .btnHotels {
 
 main .btnHotels button {
   padding: 0.5em;
-  color: white;
+  color: #fff;
   font-size: 1em;
   background-color: black;
   cursor: pointer;
 }
 
 main .btnHotels button:hover {
-  color: #d4c04e;
+  color: #b59e3c;
 }
 
 main #hotelList {
@@ -112,7 +114,7 @@ main #hotelList ul {
 
 main #hotelList ul li {
   margin-top: -0.5em;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gotham-light", Arial, sans-serif;
   text-align: center;
   width: 100%;
   background: #f5f2f2;
@@ -144,31 +146,6 @@ main #hotelList h4 a:hover {
     gap: 0rem 1rem;
     margin-right: 3em;
   }
-  main .countries li {
-    width: 100%;
-    background: #f5f2f2;
-    /* padding: 2rem 2rem; */
-    border: 0.1em solid black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 1em 1em 0em 1em;
-  }
-  main .countries li div img {
-    width: 50px;
-    height: 40px;
-    margin: 1em 0em 0em 0.4em;
-    /* margin-right: 1rem; */
-  }
-  main .countries li div h4 {
-    margin-bottom: 1rem;
-  }
   main #hotelList ul {
     -ms-grid-columns: (minmax(275px, 28%))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(275px, 28%));
@@ -186,26 +163,6 @@ main #hotelList h4 a:hover {
   }
   main .countries li {
     width: 80%;
-    background: #f5f2f2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 1em 1em 0em 1em;
-  }
-  main .countries li div img {
-    width: 50px;
-    height: 40px;
-    margin: 1em 0em 0em 0.4em;
-    /* margin-right: 1rem; */
-  }
-  main .countries li div h4 {
-    margin-bottom: 1rem;
   }
   main #hotelList ul {
     -ms-grid-columns: (minmax(300px, 40%))[auto-fit];

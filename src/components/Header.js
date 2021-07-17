@@ -111,7 +111,7 @@ const UseStateMain = () => {
     return (
         
         <header>
-            <h2>SONEVA KIRI THAILAND</h2>
+            <h2>Soneva Kiri Thailand</h2>
             <img className = "mainImage" src={Image1} alt="" /* height='400px' width='620px' */ />
             <div className='likes'>
                 <button className='btn' onClick={clickHandler}><i className="fas fa-heart">COOL</i></button>

@@ -1,24 +1,121 @@
-nav {
+nav .navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  background-color: rgb(67, 117, 63);
+  background-color: white;
   margin-left: 0.5em;
   margin-top: 1em;
   margin-right: 0.5em;
-
-  border-radius: 5px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-nav .navbar-items {
-  color: azure;
+
+nav .navbar-container .menu-btn {
+  margin: 1em;
+  font-size: 1.3em;
+}
+
+nav .navbar-container .menu-btn i {
+  color: #b59e3c;
+}
+
+nav .navbar-container h1 {
+  color: black;
+  font-family: serif;
+  margin-top: 0.9em;
+  font-size: 2em;
+  margin-right: -1.1em;
+  margin-left: 0.5em;
+}
+
+nav .navbar-container .navbar-items {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
 
-nav .navbar-items li {
+nav .navbar-container .navbar-items li {
+  font-family: serif;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  text-decoration: none;
   margin-right: 1em;
   font-size: 1.3em;
+  border-left: 0.1em solid black;
+  padding-left: 0.5em;
+  color: black;
 }
 
-.menu-btn {
-  margin: 1em;
-  font-size: 1.3em;
+nav .navbar-container .navbar-items li .nav-links {
+  text-decoration: none;
+  color: black;
 }
+
+nav .navbar-container .btnSignUp {
+  padding: 0.6em 0.5em;
+  margin: 2em 0em;
+  margin-left: 25em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fff;
+  background-color: #b59e3c;
+  border: none;
+  cursor: pointer;
+}
+
+nav .navbar-container .btnSignUp:hover {
+  color: #b59e3c;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1028px) {
+  nav .navbar-container .btnSignUp {
+    margin-left: 12.5em;
+  }
+}
+
+@media only screen and (max-width: 841px) {
+  nav .navbar-container .menu-btn {
+    margin-top: 1.7em;
+    margin-right: 0;
+  }
+  nav .navbar-container .btnSignUp {
+    margin-left: 0;
+  }
+  nav .navbar-container h1 {
+    margin-right: 6em;
+    margin-left: 6.1em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav .navbar-container h1 {
+    margin-right: 5em;
+    margin-left: 4.9em;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  nav .navbar-container h1 {
+    margin-right: 3.53em;
+    margin-left: 3.9em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav .navbar-container h1 {
+    margin-right: 3em;
+    margin-left: 2.85em;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
