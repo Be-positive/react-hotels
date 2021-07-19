@@ -1,10 +1,14 @@
 import React from 'react';
+import './About.scss'
 
 const About = () => {
   return (
-    <div>
-      <h1>Eco & Deluxe</h1>
-    </div>
+    <>
+    <section>
+      <h1>About US</h1>
+    </section>
+      
+    </>
   );
 };
 

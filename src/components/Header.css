@@ -12,7 +12,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2em;
+  margin-top: 0em;
 }
 
 header .mainImage {
@@ -20,6 +20,7 @@ header .mainImage {
 }
 
 header h2 {
+  margin-top: 6.5em;
   font-family: "Gotham-light", Arial, sans-serif;
 }
 

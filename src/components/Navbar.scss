@@ -1,16 +1,21 @@
 nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: unset;
+
   .navbar-container {
     display: flex;
     background-color: white;
     margin-left: 0.5em;
-    margin-top: 1em;
-    margin-right: 0.5em;
+    margin-right: 0em;
     flex-direction: row;
     justify-content: center;
 
     .menu-btn {
       margin: 1em;
       font-size: 1.3em;
+      cursor: pointer;
       i {
         color: #b59e3c;
       }
@@ -43,10 +48,13 @@ nav {
           text-decoration: none;
           color: black;
         }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-    .btnSignUp {
-      padding: 0.6em 0.5em;
+    #btnBook {
+      padding: 0.6em 0.8em;
       margin: 2em 0em;
       margin-left: 25em;
       justify-content: flex-end;
@@ -59,32 +67,174 @@ nav {
         background-color: #fff;
       }
     }
+    .formBook {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 11.6em;
+      margin-left: 45.4em;
+      position: fixed;
+      #closeBooking {
+        background-color: #862632;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        margin-left: 10em;
+        margin-bottom: 20.8em;
+        padding: 1em 2.6em;
+        transform: translate3d(200vw, 0, 0);
+        transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+        border: none;
+        cursor: pointer;
+      }
+      #bookingForm {
+        margin-left: 2.55em;
+        width: 14em;
+        height: 28vh;
+        background-color: #fff;
+        position: fixed;
+        /* top: 5.1em;
+        left: 25.4em; */
+        transform: translate3d(200vw, 0, 0);
+        transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+        margin-top: 4.7em;
+        margin-right: 0em;
+        ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          margin-left: -2.5em;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0.1em;
+
+          font-size: 15px;
+          color: #000;
+          li {
+            .date {
+              width: 12em;
+              padding: 5px;
+              font-size: 1em;
+              line-height: 1.15;
+              font-family: sans-serif;
+              margin: 0 0 3px;
+            }
+            #child {
+              width: 4em;
+              font-size: 1em;
+              padding: 5px;
+              font-family: "Gotham-light", Arial, sans-serif;
+              margin-left: 3.7em;
+            }
+            #adult {
+              width: 4em;
+              font-size: 1em;
+              padding: 5px;
+              font-family: "Gotham-light", Arial, sans-serif;
+              margin-left: 4.6em;
+            }
+            #hotel {
+              font-size: 1em;
+              padding: 5px;
+
+              margin: 0.2em 0em 0.2em 4.3em;
+            }
+            #country {
+              font-size: 1em;
+              padding: 5px;
+              margin: 0em 0em 0.3em 1.2em;
+            }
+
+            #hideBtn {
+              font-family: "Gotham-light", Arial, sans-serif;
+              padding: 0.6em 5em;
+              margin: 0.2em 0em;
+              color: #fff;
+              background-color: #b59e3c;
+              border: none;
+              font-size: 1em;
+              .booking {
+                text-decoration: none;
+                color: #fff;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+/* .show {
+  transform: translate3d(0vw, 0, 0);
+} */
 
 @media only screen and (max-width: 1028px) {
   nav {
     .navbar-container {
-      .btnSignUp {
+      #btnBook {
         margin-left: 12.5em;
+        padding: 0.6em 0.75em;
+      }
+      .formBook {
+        margin-left: 36.5em;
+        #closeBooking {
+          margin-left: 8em;
+        }
+
+        #bookingForm {
+          margin-right: 2em;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-width: 841px) {
+@media only screen and (max-width: 840px) {
   nav {
     .navbar-container {
       .menu-btn {
         margin-top: 1.7em;
         margin-right: 0;
       }
-      .btnSignUp {
+      #btnBook {
         margin-left: 0;
+      }
+      .formBook {
+        margin-left: 30em;
+        #closeBooking {
+          padding: 0.9em 1.6em;
+          margin-left: 8em;
+        }
+
+        #bookingForm {
+          margin-right: 2.7em;
+          margin-top: 4em;
+        }
       }
       h1 {
         margin-right: 6em;
         margin-left: 6.1em;
+      }
+      .navbar-items {
+        display: none;
+        width: 100vw;
+        height: 8vh;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        margin-top: 5em;
+        justify-content: center;
+        margin-left: -2.5em;
+        li {
+          border: none;
+        }
       }
     }
   }
@@ -92,6 +242,56 @@ nav {
 @media only screen and (max-width: 700px) {
   nav {
     .navbar-container {
+      .formBook {
+        margin-left: 27em;
+        #closeBooking {
+          padding: 0.9em 1.1em;
+          margin-left: 8em;
+        }
+        #bookingForm {
+          margin-right: 2.8em;
+          width: 12em;
+          height: 25.2vh;
+          margin-top: 2.5em;
+          ul {
+            margin-left: -2.5em;
+            margin-top: 0.1em;
+            font-size: 15px;
+
+            li {
+              .date {
+                width: 11em;
+                padding: 3.5px;
+                font-size: 1em;
+                line-height: 1.15;
+                margin: 0 0 3px;
+              }
+              #adult {
+                width: 3.2em;
+                padding: 3.5px;
+                margin-left: 4.5em;
+              }
+              #child {
+                width: 3.2em;
+                padding: 3.5px;
+                margin-left: 3.6em;
+              }
+              #hotel {
+                padding: 3.5px;
+                margin: 0.2em 0em 0.2em 3.4em;
+              }
+              #country {
+                padding: 3.5px;
+                margin: 0em 0em 0.1em 0.3em;
+              }
+              #hideBtn {
+                padding: 0.5em 4.4em;
+                margin: 0.2em 0em;
+              }
+            }
+          }
+        }
+      }
       h1 {
         margin-right: 5em;
         margin-left: 4.9em;
@@ -103,6 +303,48 @@ nav {
 @media only screen and (max-width: 630px) {
   nav {
     .navbar-container {
+      .formBook {
+        margin-left: 22em;
+        #closeBooking {
+          padding: 0.9em 1.1em;
+          margin-left: 8em;
+        }
+        #bookingForm {
+          margin-left: 0;
+          width: 100vh;
+          height: 25.2vh;
+          ul {
+            margin-left: 0em;
+            margin-top: 0.1em;
+            font-size: 15px;
+            margin-right: 23em;
+
+            li {
+              .date {
+                width: 20em;
+                margin: 0 0 3px;
+              }
+              #adult {
+                width: 4em;
+                margin-left: 12.6em;
+              }
+              #child {
+                width: 4em;
+                margin-left: 11.7em;
+              }
+              #hotel {
+                margin: 0.2em 0em 0.2em 12.3em;
+              }
+              #country {
+                margin: 0em 0em 0.1em 9.2em;
+              }
+              #hideBtn {
+                padding: 0.5em 8.9em;
+              }
+            }
+          }
+        }
+      }
       h1 {
         margin-right: 3.53em;
         margin-left: 3.9em;
@@ -117,6 +359,48 @@ nav {
       h1 {
         margin-right: 3em;
         margin-left: 2.85em;
+      }
+      .formBook {
+        margin-left: 21em;
+        #closeBooking {
+          padding: 0.9em 0.8em;
+          margin-left: 6em;
+        }
+        #bookingForm {
+          margin-left: 0;
+          width: 100vh;
+          height: 25.2vh;
+          ul {
+            margin-left: 0em;
+            margin-top: 0.1em;
+            font-size: 15px;
+            margin-right: 23em;
+
+            li {
+              .date {
+                width: 20em;
+                margin: 0 0 3px;
+              }
+              #adult {
+                width: 4em;
+                margin-left: 12.6em;
+              }
+              #child {
+                width: 4em;
+                margin-left: 11.7em;
+              }
+              #hotel {
+                margin: 0.2em 0em 0.2em 12.3em;
+              }
+              #country {
+                margin: 0em 0em 0.1em 9.2em;
+              }
+              #hideBtn {
+                padding: 0.5em 8.9em;
+              }
+            }
+          }
+        }
       }
     }
   }

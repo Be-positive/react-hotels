@@ -1,11 +1,17 @@
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: unset;
+}
+
 nav .navbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: white;
   margin-left: 0.5em;
-  margin-top: 1em;
-  margin-right: 0.5em;
+  margin-right: 0em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -18,6 +24,7 @@ nav .navbar-container {
 nav .navbar-container .menu-btn {
   margin: 1em;
   font-size: 1.3em;
+  cursor: pointer;
 }
 
 nav .navbar-container .menu-btn i {
@@ -60,8 +67,12 @@ nav .navbar-container .navbar-items li .nav-links {
   color: black;
 }
 
-nav .navbar-container .btnSignUp {
-  padding: 0.6em 0.5em;
+nav .navbar-container .navbar-items li:hover {
+  text-decoration: underline;
+}
+
+nav .navbar-container #btnBook {
+  padding: 0.6em 0.8em;
   margin: 2em 0em;
   margin-left: 25em;
   -webkit-box-pack: end;
@@ -73,32 +84,260 @@ nav .navbar-container .btnSignUp {
   cursor: pointer;
 }
 
-nav .navbar-container .btnSignUp:hover {
+nav .navbar-container #btnBook:hover {
   color: #b59e3c;
   background-color: #fff;
 }
 
+nav .navbar-container .formBook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 11.6em;
+  margin-left: 45.4em;
+  position: fixed;
+}
+
+nav .navbar-container .formBook #closeBooking {
+  background-color: #862632;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  margin-left: 10em;
+  margin-bottom: 20.8em;
+  padding: 1em 2.6em;
+  -webkit-transform: translate3d(200vw, 0, 0);
+          transform: translate3d(200vw, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1), -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  border: none;
+  cursor: pointer;
+}
+
+nav .navbar-container .formBook #bookingForm {
+  margin-left: 2.55em;
+  width: 14em;
+  height: 28vh;
+  background-color: #fff;
+  position: fixed;
+  /* top: 5.1em;
+        left: 25.4em; */
+  -webkit-transform: translate3d(200vw, 0, 0);
+          transform: translate3d(200vw, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1), -webkit-transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  margin-top: 4.7em;
+  margin-right: 0em;
+}
+
+nav .navbar-container .formBook #bookingForm ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -2.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.1em;
+  font-size: 15px;
+  color: #000;
+}
+
+nav .navbar-container .formBook #bookingForm ul li .date {
+  width: 12em;
+  padding: 5px;
+  font-size: 1em;
+  line-height: 1.15;
+  font-family: sans-serif;
+  margin: 0 0 3px;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #child {
+  width: 4em;
+  font-size: 1em;
+  padding: 5px;
+  font-family: "Gotham-light", Arial, sans-serif;
+  margin-left: 3.7em;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #adult {
+  width: 4em;
+  font-size: 1em;
+  padding: 5px;
+  font-family: "Gotham-light", Arial, sans-serif;
+  margin-left: 4.6em;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #hotel {
+  font-size: 1em;
+  padding: 5px;
+  margin: 0.2em 0em 0.2em 4.3em;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #country {
+  font-size: 1em;
+  padding: 5px;
+  margin: 0em 0em 0.3em 1.2em;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #hideBtn {
+  font-family: "Gotham-light", Arial, sans-serif;
+  padding: 0.6em 5em;
+  margin: 0.2em 0em;
+  color: #fff;
+  background-color: #b59e3c;
+  border: none;
+  font-size: 1em;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #hideBtn .booking {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .navbar-container .formBook #bookingForm ul li #hideBtn .booking:hover {
+  text-decoration: underline;
+}
+
+/* .show {
+  transform: translate3d(0vw, 0, 0);
+} */
 @media only screen and (max-width: 1028px) {
-  nav .navbar-container .btnSignUp {
+  nav .navbar-container #btnBook {
     margin-left: 12.5em;
+    padding: 0.6em 0.75em;
+  }
+  nav .navbar-container .formBook {
+    margin-left: 36.5em;
+  }
+  nav .navbar-container .formBook #closeBooking {
+    margin-left: 8em;
+  }
+  nav .navbar-container .formBook #bookingForm {
+    margin-right: 2em;
   }
 }
 
-@media only screen and (max-width: 841px) {
+@media only screen and (max-width: 840px) {
   nav .navbar-container .menu-btn {
     margin-top: 1.7em;
     margin-right: 0;
   }
-  nav .navbar-container .btnSignUp {
+  nav .navbar-container #btnBook {
     margin-left: 0;
+  }
+  nav .navbar-container .formBook {
+    margin-left: 30em;
+  }
+  nav .navbar-container .formBook #closeBooking {
+    padding: 0.9em 1.6em;
+    margin-left: 8em;
+  }
+  nav .navbar-container .formBook #bookingForm {
+    margin-right: 2.7em;
+    margin-top: 4em;
   }
   nav .navbar-container h1 {
     margin-right: 6em;
     margin-left: 6.1em;
   }
+  nav .navbar-container .navbar-items {
+    display: none;
+    width: 100vw;
+    height: 8vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: -2.5em;
+  }
+  nav .navbar-container .navbar-items li {
+    border: none;
+  }
 }
 
 @media only screen and (max-width: 700px) {
+  nav .navbar-container .formBook {
+    margin-left: 27em;
+  }
+  nav .navbar-container .formBook #closeBooking {
+    padding: 0.9em 1.1em;
+    margin-left: 8em;
+  }
+  nav .navbar-container .formBook #bookingForm {
+    margin-right: 2.8em;
+    width: 12em;
+    height: 25.2vh;
+    margin-top: 2.5em;
+  }
+  nav .navbar-container .formBook #bookingForm ul {
+    margin-left: -2.5em;
+    margin-top: 0.1em;
+    font-size: 15px;
+  }
+  nav .navbar-container .formBook #bookingForm ul li .date {
+    width: 11em;
+    padding: 3.5px;
+    font-size: 1em;
+    line-height: 1.15;
+    margin: 0 0 3px;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #adult {
+    width: 3.2em;
+    padding: 3.5px;
+    margin-left: 4.5em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #child {
+    width: 3.2em;
+    padding: 3.5px;
+    margin-left: 3.6em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hotel {
+    padding: 3.5px;
+    margin: 0.2em 0em 0.2em 3.4em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #country {
+    padding: 3.5px;
+    margin: 0em 0em 0.1em 0.3em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hideBtn {
+    padding: 0.5em 4.4em;
+    margin: 0.2em 0em;
+  }
   nav .navbar-container h1 {
     margin-right: 5em;
     margin-left: 4.9em;
@@ -106,6 +345,45 @@ nav .navbar-container .btnSignUp:hover {
 }
 
 @media only screen and (max-width: 630px) {
+  nav .navbar-container .formBook {
+    margin-left: 22em;
+  }
+  nav .navbar-container .formBook #closeBooking {
+    padding: 0.9em 1.1em;
+    margin-left: 8em;
+  }
+  nav .navbar-container .formBook #bookingForm {
+    margin-left: 0;
+    width: 100vh;
+    height: 25.2vh;
+  }
+  nav .navbar-container .formBook #bookingForm ul {
+    margin-left: 0em;
+    margin-top: 0.1em;
+    font-size: 15px;
+    margin-right: 23em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li .date {
+    width: 20em;
+    margin: 0 0 3px;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #adult {
+    width: 4em;
+    margin-left: 12.6em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #child {
+    width: 4em;
+    margin-left: 11.7em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hotel {
+    margin: 0.2em 0em 0.2em 12.3em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #country {
+    margin: 0em 0em 0.1em 9.2em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hideBtn {
+    padding: 0.5em 8.9em;
+  }
   nav .navbar-container h1 {
     margin-right: 3.53em;
     margin-left: 3.9em;
@@ -116,6 +394,45 @@ nav .navbar-container .btnSignUp:hover {
   nav .navbar-container h1 {
     margin-right: 3em;
     margin-left: 2.85em;
+  }
+  nav .navbar-container .formBook {
+    margin-left: 21em;
+  }
+  nav .navbar-container .formBook #closeBooking {
+    padding: 0.9em 0.8em;
+    margin-left: 6em;
+  }
+  nav .navbar-container .formBook #bookingForm {
+    margin-left: 0;
+    width: 100vh;
+    height: 25.2vh;
+  }
+  nav .navbar-container .formBook #bookingForm ul {
+    margin-left: 0em;
+    margin-top: 0.1em;
+    font-size: 15px;
+    margin-right: 23em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li .date {
+    width: 20em;
+    margin: 0 0 3px;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #adult {
+    width: 4em;
+    margin-left: 12.6em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #child {
+    width: 4em;
+    margin-left: 11.7em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hotel {
+    margin: 0.2em 0em 0.2em 12.3em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #country {
+    margin: 0em 0em 0.1em 9.2em;
+  }
+  nav .navbar-container .formBook #bookingForm ul li #hideBtn {
+    padding: 0.5em 8.9em;
   }
 }
 /*# sourceMappingURL=Navbar.css.map */

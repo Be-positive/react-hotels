@@ -1,0 +1,26 @@
+section {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-left: 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section h3 {
+  font-family: "Gotham-light", Arial, sans-serif;
+  text-align: center;
+  margin: 8.5em 3em 1em 3em;
+}
+
+section h4 {
+  font-family: "Gotham-light", Arial, sans-serif;
+  color: #b59e3c;
+}
+/*# sourceMappingURL=Job.css.map */

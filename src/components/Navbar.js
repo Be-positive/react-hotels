@@ -6,7 +6,25 @@ const Navbar = () => {
 
 
     const[menu, setMenu] = useState(false)
-    const clickHandler = () => setMenu(!menu)  
+
+    const clickHandler = () => {        
+        if(menu === false && window.innerWidth <= 840){
+            setMenu(true)            
+            var list1 = document.getElementById('menuList')
+            list1.style.display = 'flex'
+            let closeBtn2 = document.getElementById('closeBooking')               
+            closeBtn2.style.transform = 'translate3d(200vw, 0, 0)'                                          
+            let btnBook2 = document.getElementById('bookingForm')               
+            btnBook2.style.transform = 'translate3d(200vw, 0, 0)'
+            
+        }
+        else if(menu === true && window.innerWidth <= 840){ 
+            setMenu(false)                      
+            var menu2 = document.getElementById('menuList')
+            menu2.style.display ='none'
+        }
+
+    }  
 
     const[hideMenu, setHideMenu] = useState(false)
     
@@ -14,19 +32,68 @@ const Navbar = () => {
         if(window.innerWidth <= 840){            
             setHideMenu(true)
             let btn1 = document.getElementById('btnBook')
-            btn1.innerHTML = 'BOOK'            
+            btn1.innerHTML = 'BOOK'                       
         } else {            
             setHideMenu(false)
             let btn2 = document.getElementById('btnBook')
             btn2.innerHTML = 'BOOK ONLINE'
-        }
-             
             
-        }
-    
+        }        
+           
+    }
+    useEffect(() => {
+        window.addEventListener('resize', showList) 
+    }, []) 
+
+    const showList = () => {
+        if(window.innerWidth > 840){          
+            var list1 = document.getElementById('menuList')
+            list1.style.display = 'flex' 
+        } else {
+            setMenu(false)
+            var list2 = document.getElementById('menuList')
+            list2.style.display = 'none'
+        }       
+           
+    }
     useEffect(() => {
         window.addEventListener('resize', showMenu) 
-    }, [])          
+    }, [])
+    
+    /* const[bookBtn, setBookBtn] = useState(false) */
+
+    const boockClick = (e) => {   
+        e.stopPropagation()
+        /* e.preventDefault() */
+        let closeBtn1 = document.getElementById('closeBooking')        
+        closeBtn1.style.transform = 'translate3d(0vw, 0, 0)'                                  
+        let btnBook1 = document.getElementById('bookingForm')              
+        btnBook1.style.transform = 'translate3d(0vw, 0, 0)'
+        /* btnBook1.classList.add('show') */
+        if(window.innerWidth<=840){
+            setMenu(false)                      
+            var menu2 = document.getElementById('menuList')
+            menu2.style.display ='none' 
+        }        
+    } 
+    const finishBook = (e) => {
+        e.stopPropagation()        
+        let closeBtn2 = document.getElementById('closeBooking')               
+        closeBtn2.style.transform = 'translate3d(200vw, 0, 0)'                                          
+        let btnBook2 = document.getElementById('bookingForm')               
+        btnBook2.style.transform = 'translate3d(200vw, 0, 0)'      
+    }
+    
+    const bookButton = (e) => {
+        e.preventDefault()
+        let closeBtn3 = document.getElementById('closeBooking')               
+        closeBtn3.style.transform = 'translate3d(200vw, 0, 0)'                                          
+        let btnBook3 = document.getElementById('bookingForm')               
+        btnBook3.style.transform = 'translate3d(200vw, 0, 0)'
+
+
+    }
+         
 
     return (
         <React.Fragment>
@@ -36,8 +103,8 @@ const Navbar = () => {
                     {hideMenu && <div className="menu-btn" onClick={clickHandler}>
                       <i className={menu ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>}
-                    <Link to='/' className='logo' style={{textDecoration:'none'}}><h1>Eco & Deluxe</h1></Link>
-                    {!hideMenu && <ul className='navbar-items'>
+                    <Link to='/about' className='logo' style={{textDecoration:'none'}}><h1>Eco & Deluxe</h1></Link>
+                    {/* {!hideMenu && */} <ul className='navbar-items' id="menuList">
                         <li className='nav-item'>
                             <Link to='/' className='nav-links'>
                                 Home
@@ -59,25 +126,69 @@ const Navbar = () => {
                             </Link>
                         </li>                                          
                                         
-                    </ul>}
-                    <button id="btnBook" className='btnSignUp'>BOOK ONLINE</button>
+                    </ul>
+                    <button id="btnBook" /* className='btnBooking'  */onClick={boockClick} >BOOK ONLINE</button>
+                    <div className='formBook'>
+                        <button id='closeBooking' onClick={finishBook}>CLOSE</button>
+                        <form id='bookingForm' action="#">
+                            <ul>
+                                <li ><input className='date' type="date" value="2021-07-19" min="2021-07-19" max="2022-12-31"></input></li>
+                                <li><input className='date' type="date" value="2021-07-20" min="2021-07-20" max="2022-12-31"/></li>
+                                <li> 
+                                    <label htmlFor="adult">Adult(s)</label>
+                                    <input type="number"  id="adult" name="adult" min="1" max="30" placeholder='1'></input>
+                                </li>
+                                <li>
+                                    <label htmlFor="child">Child(ren)</label>
+                                    <input type="number" id="child" name="child" min="0" max="30" placeholder='0'></input>
+                                </li>
+                                <li>
+                                    <label htmlFor='hotel'>Hotel</label>
+                                    <select name="hotel" id="hotel">
+                                       <option value="2">Luxury</option>
+                                       <option value="boutiqe">Boutique</option>
+                                       <option value="eco">Holiday</option>
+                                       <option value="eco">Family</option>
+                                    </select>
+                                </li> 
+                                <li>
+                                <label htmlFor="country">Country</label>
+                                <select name="country" id="country">
+                                <option value="2">Singapure</option>                                
+                                <option value="cambodia">Cambodia</option>
+                                <option value="indoneisia">Indoneisia</option>
+                                <option value="malaysia">Malaysia</option>
+                                <option value="myanmar">Myanmar</option>
+                                <option value="philippines">Philippines</option>
+                                <option value="brunei">Brunei </option>
+                                <option value="thailand">Thailand</option>
+                                <option value="timor">Thimor-Leste</option>
+                                <option value="vietnam">Viet Nam</option>
+                                </select>
+                                </li>
+                                                      
+                                <li>
+                                    <button id="hideBtn" onClick={bookButton} >
+                                        <Link className="booking" to='/hotels'>BOOK</Link>
+                                    </button>
+                                </li>
+                            </ul>
+                           
+                          
+
+                           
+                           
+
+                          
+                           
+                           
+                        </form>                        
+                    </div>
                 
 
 
 
-                </div>
-                {/* {hideMenu && <div className="menu-btn" onClick={clickHandler}>
-                    <i className={menu ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>}
-                <h2>Eco & Deluxe</h2>                
-                {!hideMenu && <ul className='navbar-items'>
-                    <li>Home</li>                    
-                    <li>Product</li>                    
-                    <li>Price</li>                    
-                    <li>Services</li>                   
-                                        
-                </ul>}
-                <button className='btnSignUp'>BOOK ONLINE</button> */}            
+                </div>                          
             </nav>                                  
         </React.Fragment>
     )
