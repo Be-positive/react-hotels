@@ -27,14 +27,17 @@ section {
         margin: 0em 1em;
         display: inline-block;
         text-align: center;
-        a {
-          color: #000;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-            color: #b59e3c;
-          }
+        color: #000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+          color: #b59e3c;
+        }
+        &:active {
+          text-decoration: underline;
+          color: #b59e3c;
         }
       }
     }
@@ -85,7 +88,6 @@ section {
 @media only screen and (max-width: 550px) {
   section {
     .singapure {
-      margin-left: 0.8em;
       width: 470px;
       height: 220px;
     }

@@ -6,6 +6,7 @@ const About = () => {
     <>
     <section>
       <h1>About US</h1>
+      <p></p>
     </section>
       
     </>

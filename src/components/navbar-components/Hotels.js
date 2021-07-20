@@ -10,46 +10,48 @@ const Hotels = () => {
             <div className='hotelsCountry'>
                 <h2> Top hotels in Singapore </h2>
                 <ul>                    
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>                
+                    <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                    <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                    <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                    <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                    <li title = 'Info about this hotel'>Lorem ipsum dolor </li>                                                                  
                 </ul>
                 <h2> Top hotels in Cambodia</h2>
                 <ul>                    
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                           
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                                       
+                             
                 </ul>
                 <h2> Top hotels in Indonesia </h2>
                 <ul>                    
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>                                      
                           
                 </ul>
                 <h2> Top hotels in Malaysia </h2>
                 <ul>                    
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>                          
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>                                        
+                                           
                 </ul>
                 <h2> Top hotels in Myanmar </h2>
                 <ul>                    
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                <li title = 'Info about this hotel'>Lorem ipsum dolor </li>
+                                      
                 </ul>
                 
                 

@@ -51,15 +51,18 @@ section .hotelsCountry ul li {
   margin: 0em 1em;
   display: inline-block;
   text-align: center;
-}
-
-section .hotelsCountry ul li a {
   color: #000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
+  cursor: pointer;
 }
 
-section .hotelsCountry ul li a:hover {
+section .hotelsCountry ul li:hover {
+  text-decoration: underline;
+  color: #b59e3c;
+}
+
+section .hotelsCountry ul li:active {
   text-decoration: underline;
   color: #b59e3c;
 }
@@ -101,7 +104,6 @@ section .hotelsCountry ul li a:hover {
 
 @media only screen and (max-width: 550px) {
   section .singapure {
-    margin-left: 0.8em;
     width: 470px;
     height: 220px;
   }

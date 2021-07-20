@@ -38,8 +38,7 @@ const Navbar = () => {
             let btn2 = document.getElementById('btnBook')
             btn2.innerHTML = 'BOOK ONLINE'
             
-        }        
-           
+        }      
     }
     useEffect(() => {
         window.addEventListener('resize', showList) 
@@ -56,9 +55,17 @@ const Navbar = () => {
         }       
            
     }
-    useEffect(() => {
-        window.addEventListener('resize', showMenu) 
-    }, [])
+    useEffect(() => {               
+        if(window.innerWidth <= 840){            
+            setHideMenu(true)
+            let btn1 = document.getElementById('btnBook')
+            btn1.innerHTML = 'BOOK'
+        }         
+        window.addEventListener('resize', showMenu)
+        return () => {            
+            window.removeEventListener('resize', showMenu)
+        } 
+    },[]);
     
     /* const[bookBtn, setBookBtn] = useState(false) */
 
@@ -90,9 +97,12 @@ const Navbar = () => {
         closeBtn3.style.transform = 'translate3d(200vw, 0, 0)'                                          
         let btnBook3 = document.getElementById('bookingForm')               
         btnBook3.style.transform = 'translate3d(200vw, 0, 0)'
-
-
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()                        
+    }
+    //prevent default - prevent Default behavior we doing how i want! 
          
 
     return (
@@ -103,7 +113,7 @@ const Navbar = () => {
                     {hideMenu && <div className="menu-btn" onClick={clickHandler}>
                       <i className={menu ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>}
-                    <Link to='/about' className='logo' style={{textDecoration:'none'}}><h1>Eco & Deluxe</h1></Link>
+                    <Link to='/' className='logo' style={{textDecoration:'none'}}><h1>Eco & Deluxe</h1></Link>
                     {/* {!hideMenu && */} <ul className='navbar-items' id="menuList">
                         <li className='nav-item'>
                             <Link to='/' className='nav-links'>
@@ -130,10 +140,10 @@ const Navbar = () => {
                     <button id="btnBook" /* className='btnBooking'  */onClick={boockClick} >BOOK ONLINE</button>
                     <div className='formBook'>
                         <button id='closeBooking' onClick={finishBook}>CLOSE</button>
-                        <form id='bookingForm' action="#">
+                        <form id='bookingForm' action="#" onSubmit={handleSubmit}>
                             <ul>
-                                <li ><input className='date' type="date" value="2021-07-19" min="2021-07-19" max="2022-12-31"></input></li>
-                                <li><input className='date' type="date" value="2021-07-20" min="2021-07-20" max="2022-12-31"/></li>
+                                <li ><input className='date' type="date" defaultValue="2021-07-19" min="2021-07-19" max="2022-12-31"></input></li>
+                                <li><input className='date' type="date" defaultValue="2021-07-20" min="2021-07-20" max="2022-12-31"/></li>
                                 <li> 
                                     <label htmlFor="adult">Adult(s)</label>
                                     <input type="number"  id="adult" name="adult" min="1" max="30" placeholder='1'></input>
@@ -165,8 +175,7 @@ const Navbar = () => {
                                 <option value="timor">Thimor-Leste</option>
                                 <option value="vietnam">Viet Nam</option>
                                 </select>
-                                </li>
-                                                      
+                                </li>                                                      
                                 <li>
                                     <button id="hideBtn" onClick={bookButton} >
                                         <Link className="booking" to='/hotels'>BOOK</Link>
