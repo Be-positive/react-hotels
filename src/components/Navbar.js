@@ -131,8 +131,8 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/hotels' className='nav-links' >
-                                Hotels
+                            <Link to='/rooms' className='nav-links' >
+                                Rooms
                             </Link>
                         </li>                                          
                                         
@@ -157,14 +157,14 @@ const Navbar = () => {
                                     <select name="hotel" id="hotel">
                                        <option value="2">Luxury</option>
                                        <option value="boutiqe">Boutique</option>
-                                       <option value="eco">Holiday</option>
-                                       <option value="eco">Family</option>
+                                       <option value="holiday">Holiday</option>
+                                       <option value="family">Family</option>
                                     </select>
                                 </li> 
                                 <li>
                                 <label htmlFor="country">Country</label>
                                 <select name="country" id="country">
-                                <option value="2">Singapure</option>                                
+                                <option value="2">Singapore</option>                                
                                 <option value="cambodia">Cambodia</option>
                                 <option value="indoneisia">Indoneisia</option>
                                 <option value="malaysia">Malaysia</option>
@@ -178,7 +178,7 @@ const Navbar = () => {
                                 </li>                                                      
                                 <li>
                                     <button id="hideBtn" onClick={bookButton} >
-                                        <Link className="booking" to='/hotels'>BOOK</Link>
+                                        <Link className="booking" to='/rooms'>BOOK</Link>
                                     </button>
                                 </li>
                             </ul>

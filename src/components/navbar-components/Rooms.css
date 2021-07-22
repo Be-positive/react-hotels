@@ -1,0 +1,309 @@
+section {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-left: 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .singapure {
+  margin-left: 0.3em;
+}
+
+section h1 {
+  margin-top: 6.5em;
+  text-align: center;
+}
+
+section .selectRoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .selectRoom h1 {
+  margin: 2em 0em -1em 0em;
+  text-align: center;
+}
+
+section .selectRoom form {
+  width: 100%;
+  background-color: #3f3d3d;
+  color: #fff;
+}
+
+section .selectRoom form ul {
+  list-style-type: none;
+}
+
+section .selectRoom form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .selectRoom form ul li div {
+  margin-right: 3em;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.3em;
+}
+
+section .selectRoom form ul li #searchBtn {
+  font-family: "Gotham-light", Arial, sans-serif;
+  padding: 0.6em 10em;
+  margin: 0.5em 0em 0em 2.7em;
+  color: #fff;
+  background-color: #b59e3c;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+section #roomsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3em;
+}
+
+section #roomsList .Room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: black solid 0.1em;
+  margin: 0.5em 12em;
+}
+
+section #roomsList .Room ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #roomsList .Room ul .roomLeft {
+  margin-left: -2em;
+  margin-right: 1em;
+}
+
+section #roomsList .Room ul .roomCenter {
+  margin-top: 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #roomsList .Room ul .roomCenter .center {
+  margin-right: 0em;
+}
+
+section #roomsList .Room ul .roomCenter .center h3 {
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+section #roomsList .Room ul .roomCenter .center p {
+  margin: 0em 0em;
+}
+
+section #roomsList .Room ul .roomCenter .right {
+  margin: 0em 0.5em 0em 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section #roomsList .Room ul .roomCenter .right h4 {
+  color: black;
+  font-size: 1em;
+  text-align: center;
+}
+
+section #roomsList .Room ul .roomCenter .right button {
+  font-family: "Gotham-light", Arial, sans-serif;
+  padding: 0.7em 0.5em;
+  color: #fff;
+  background-color: #b59e3c;
+  border: none;
+  cursor: pointer;
+}
+
+section #finishBook {
+  margin-top: 10em;
+  position: fixed;
+  display: none;
+}
+
+section #finishBook form {
+  width: 100%;
+  background-color: #3f3d3d;
+  color: #fff;
+}
+
+section #finishBook form ul {
+  list-style-type: none;
+}
+
+section #finishBook form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #finishBook form ul li div {
+  margin-right: 3em;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.3em;
+}
+
+section #finishBook form ul li #finishBtn {
+  font-family: "Gotham-light", Arial, sans-serif;
+  padding: 0.6em 10em;
+  margin: 0.5em 0em 0em 2.7em;
+  color: #fff;
+  background-color: #b59e3c;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1320px) {
+  section .singapure {
+    width: 1000px;
+    height: 410px;
+  }
+  section #roomsList .Room {
+    margin: 0.5em 7em;
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  section .singapure {
+    width: 820px;
+    height: 335px;
+  }
+  section #roomsList .Room {
+    margin: 0.5em 1em;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  section .singapure {
+    width: 680px;
+    height: 300px;
+  }
+  section #roomsList .Room {
+    margin: 0.5em 0.2em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  section .singapure {
+    width: 605px;
+    height: 270px;
+  }
+  section #roomsList .Room {
+    margin: 0.5em 0.2em;
+  }
+  section #roomsList .Room ul .roomCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section #roomsList .Room ul .roomCenter .center h4 {
+    text-align: left;
+    margin-top: 0.5em;
+  }
+  section #roomsList .Room ul .roomCenter .right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: -1em;
+  }
+  section #roomsList .Room ul .roomCenter .right button {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  section .singapure {
+    width: 530px;
+    height: 240px;
+  }
+  section .selectRoom form ul li div {
+    margin-right: 2em;
+  }
+  section .selectRoom form ul li #searchBtn {
+    margin-left: 0em;
+    padding: 0.6em 11em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  section .singapure {
+    width: 470px;
+    height: 220px;
+  }
+}
+/*# sourceMappingURL=Rooms.css.map */

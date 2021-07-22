@@ -8,7 +8,7 @@ import Bitcoin from './components/Bitcoin'
 
 import About from './components/navbar-components/About'
 import Job from './components/navbar-components/Job'
-import Hotels from './components/navbar-components/Hotels'
+import Rooms from './components/navbar-components/Rooms'
 import Error from './components/navbar-components/Error'
 
 import { 
@@ -36,8 +36,8 @@ function App() {
           <Route path="/job">
             <Job />            
           </Route>
-          <Route path="/hotels">
-            <Hotels />            
+          <Route path="/rooms">
+            <Rooms />            
           </Route>
           <Route path="*">
             <Error />
