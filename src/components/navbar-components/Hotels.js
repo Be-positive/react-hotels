@@ -15,9 +15,7 @@ const Hotels = () => {
         e.preventDefault()
         const formShow = document.getElementById('finishBook')
         formShow.style.display = 'flex'       
-    } */
-
-   
+    } */  
     
     const[drop, setDrop] = useState(false)
 
@@ -30,9 +28,7 @@ const Hotels = () => {
             form1.style.opacity = '1'
             form1.style.zIndex = '1'
             form1.style.transform = 'translateY(0)'
-            form1.style.transitionDelay = '0s, 0s, 0.3s'  
-              
-            
+            form1.style.transitionDelay = '0s, 0s, 0.3s'                            
         } else {
             setDrop(false)
             const form2 = document.getElementById('searchForm')
@@ -42,11 +38,9 @@ const Hotels = () => {
             form2.style.zIndex = '-1'
             form2.style.transform = 'translateY(-3em)'
             form2.style.transition = 'all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s';
-            
         }
     }
-    
-    
+        
     const refCountry = useRef('Singapore')
     const refClassHotell = useRef('Luxory')
     const refCheckIn = useRef('19.07.2021')
@@ -74,9 +68,11 @@ const Hotels = () => {
         clickDrop()        
     }
 
-    const bookRoom = () => {        
+    const bookRoom = () => {                      
         const formShow = document.getElementById('finishBook')
         formShow.style.display = 'flex'
+        /* formShow.style.transform = 'translate3d(0vh, 0, 0)' */
+        formShow.style.marginTop = '9.5vh'
         const setCountries = document.getElementById('setCountries1')        
         setCountries.innerHTML = refCountry.current.value
         const classHotel = document.getElementById('classHotel1')        
@@ -105,19 +101,19 @@ const Hotels = () => {
 
 
     const bookRoom1 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel1 = document.getElementById('hotel1')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel1.innerText
         bookRoom()
         const price1 = document.getElementById('price1')
         const priceRoom = document.getElementById('priceRoom')        
-        priceRoom.innerText = parseInt(priceRoom.innerText) + parseInt(price1.innerText)         
+        priceRoom.innerText = parseInt(priceRoom.innerText) + parseInt(price1.innerText)                 
         
              
     }
     const bookRoom2 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel2 = document.getElementById('hotel2')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel2.innerText
@@ -128,7 +124,7 @@ const Hotels = () => {
               
     }
     const bookRoom3 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel3 = document.getElementById('hotel3')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel3.innerText
@@ -139,7 +135,7 @@ const Hotels = () => {
                
     }
     const bookRoom4 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel4 = document.getElementById('hotel4')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel4.innerText  
@@ -150,7 +146,7 @@ const Hotels = () => {
                
     }
     const bookRoom5 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel5 = document.getElementById('hotel5')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel5.innerText
@@ -161,7 +157,7 @@ const Hotels = () => {
               
     }
     const bookRoom6 = (e) => {        
-        e.preventDefault()
+        e.stopPropagation()  
         const hotel6 = document.getElementById('hotel6')        
         const hotelInfo = document.getElementById('hotelInfo')
         hotelInfo.innerText = hotel6.innerText
@@ -172,10 +168,12 @@ const Hotels = () => {
                
     }
     
-    const bookBtn = (e) => {
-        e.preventDefault()
-        const formShow = document.getElementById('finishBook')
-        formShow.style.display = 'none' 
+    const bookBtn = (e) => {        
+        e.stopPropagation()
+        const formShow = document.getElementById('finishBook')        
+        /* formShow.style.transform = 'translate3d(200vh, 0, 0)' */
+        formShow.style.marginTop = '-200vh'
+
     }
     
     

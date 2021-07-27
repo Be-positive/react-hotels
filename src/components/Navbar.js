@@ -93,13 +93,13 @@ const Navbar = () => {
     }
     
     const bookButton = (e) => {
-        e.preventDefault()
+        e.stopPropagation()
         let closeBtn3 = document.getElementById('closeBooking')               
         closeBtn3.style.transform = 'translate3d(200vw, 0, 0)'                                          
         let btnBook3 = document.getElementById('bookingForm')               
         btnBook3.style.transform = 'translate3d(200vw, 0, 0)'
-        const adultInfo = document.getElementById('adult')
-        console.log(adultInfo.valueAsNumber)
+        /* const adultInfo = document.getElementById('adult')
+        console.log(adultInfo.valueAsNumber) */
     }
 
     const handleSubmit = (e) => {

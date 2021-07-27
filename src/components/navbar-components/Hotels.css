@@ -6,11 +6,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section .singapure {
@@ -28,52 +28,135 @@ section .selectRoom {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section .selectRoom h1 {
   margin: 2em 0em -1em 0em;
   text-align: center;
+  font-family: Graphik-Medium, sans-serif;
+  font-size: 24px;
+  color: #707372;
 }
 
-section .selectRoom form {
-  width: 100%;
+section .selectRoom .searchDrop {
+  margin-top: 2em;
   background-color: #3f3d3d;
-  color: #fff;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 58em;
 }
 
-section .selectRoom form ul {
+section .selectRoom .searchDrop ul {
   list-style-type: none;
-}
-
-section .selectRoom form ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-section .selectRoom form ul li div {
-  margin-right: 3em;
+section .selectRoom .searchDrop ul .changeSearch {
+  text-align: right;
+  margin-left: 7.5em;
+}
+
+section .selectRoom .searchDrop ul li {
+  margin: 0em 0.2em 0em 0.3em;
+  color: #fff;
+}
+
+section .selectRoom .searchDrop ul li i {
+  border: #fff solid 0.1em;
+  padding: 0.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section .selectRoom .searchDrop ul li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .selectRoom .searchDrop ul li ul li {
+  margin: 0em 0.5em 0em 0.5em;
+  border-left: 0.1em solid white;
+  color: #fff;
+  padding-left: 0.5em;
+}
+
+section .selectRoom .searchDrop #searchForm {
+  width: 100%;
+  background-color: #3f3d3d;
+  color: #fff;
+  visibility: hidden;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  -webkit-transform: translateY(-3em);
+          transform: translateY(-3em);
+  z-index: -1;
+  -webkit-transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+section .selectRoom .searchDrop #searchForm ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .selectRoom .searchDrop #searchForm ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .selectRoom .searchDrop #searchForm ul li div {
+  margin-right: 2em;
   margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 1.3em;
 }
 
-section .selectRoom form ul li #searchBtn {
+section .selectRoom .searchDrop #searchForm ul li #searchBtn {
   font-family: "Gotham-light", Arial, sans-serif;
   padding: 0.6em 10em;
-  margin: 0.5em 0em 0em 2.7em;
+  margin: 0em 2.5em 0.5em 0em;
   color: #fff;
   background-color: #b59e3c;
   border: none;
@@ -87,8 +170,8 @@ section #roomsList {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 3em;
 }
 
@@ -98,8 +181,8 @@ section #roomsList .Room {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: black solid 0.1em;
   margin: 0.5em 12em;
 }
@@ -111,8 +194,8 @@ section #roomsList .Room ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 section #roomsList .Room ul .roomLeft {
@@ -127,8 +210,8 @@ section #roomsList .Room ul .roomCenter {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 section #roomsList .Room ul .roomCenter .center {
@@ -151,11 +234,11 @@ section #roomsList .Room ul .roomCenter .right {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section #roomsList .Room ul .roomCenter .right h4 {
@@ -174,9 +257,18 @@ section #roomsList .Room ul .roomCenter .right button {
 }
 
 section #finishBook {
-  margin-top: 10em;
+  font-family: "Canto Roman";
   position: fixed;
-  display: none;
+  z-index: 1;
+  width: 81.5em;
+  height: 90vh;
+  /* margin-top: 5.7em; */
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  /* transform: translate3d(-100vh, 0, 0); */
+  margin-top: -200vh;
 }
 
 section #finishBook form {
@@ -185,45 +277,249 @@ section #finishBook form {
   color: #fff;
 }
 
+section #finishBook form h1 {
+  font-size: 2em;
+  margin-top: 0.5em;
+  text-align: left;
+  margin-left: 1.5em;
+}
+
+section #finishBook form .hotelCountry {
+  text-align: left;
+  margin-left: -1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #b59e3c;
+}
+
+section #finishBook form .hotelCountry #hotelInfo {
+  margin-right: -3em;
+}
+
+section #finishBook form .hotelCountry h3 {
+  font-size: 1.5em;
+  margin-top: 0em;
+  border-right: 0.1em solid #b59e3c;
+  padding: 0em 0.5em;
+}
+
+section #finishBook form .otherHotel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* background-color: royalblue; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 0.2em;
+  margin-top: 0em;
+}
+
+section #finishBook form .otherHotel li {
+  margin: 0em 0.5em 0em 0.5em;
+  border-right: 0.1em solid white;
+  color: #fff;
+  padding: 0em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1.2em;
+}
+
+section #finishBook form .totalPrice {
+  margin-top: 1.5em;
+  text-align: left;
+  color: #b59e3c;
+  margin-left: 3.7em;
+  font-size: 1.2em;
+}
+
+section #finishBook form .totalPrice #priceRoom {
+  text-decoration: underline;
+}
+
 section #finishBook form ul {
+  margin-top: 2em;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 2em;
+}
+
+section #finishBook form ul .paymentInfo {
+  background-color: #4e4941;
+}
+
+section #finishBook form ul .paymentInfo .payForm {
+  margin-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section #finishBook form ul .paymentInfo .payForm .payInfo {
+  color: bisque;
+  font-size: 1.3em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+section #finishBook form ul .paymentInfo .payForm .reserveCard {
+  font-size: 1.1em;
+}
+
+section #finishBook form ul .paymentInfo .payForm p {
+  margin-top: -0.6em;
+  color: #8d816f;
+  font-size: 0.8em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .allFields {
+  color: #fff;
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+  font-size: 0.9em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .card {
+  font-size: 1.2em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .card input {
+  font-size: 1.2em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .expCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #finishBook form ul .paymentInfo .payForm .expCard .month {
+  margin-top: 0em;
+  font-size: 0.9em;
+  width: 7em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .expCard .year {
+  margin-top: 0.9em;
+  margin-left: -2.5em;
+  font-size: 0.9em;
+}
+
+section #finishBook form ul .paymentInfo .payForm .secCode {
+  margin-top: -0.5em;
+  font-size: 1.1em;
 }
 
 section #finishBook form ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section #finishBook form ul li div {
   margin-right: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 1.3em;
 }
 
-section #finishBook form ul li #finishBtn {
-  font-family: "Gotham-light", Arial, sans-serif;
-  padding: 0.6em 10em;
-  margin: 0.5em 0em 0em 2.7em;
+section #finishBook form ul li div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0em;
+}
+
+section #finishBook form ul li div div input {
+  font-size: 1em;
+  width: 10em;
+}
+
+section #finishBook form ul li div div label {
+  font-size: 0.7em;
+}
+
+section #finishBook form .checkBox {
+  margin-left: 11em;
+  margin-bottom: 1em;
+}
+
+section #finishBook form .checkBox label span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+section #finishBook form #lastButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #finishBook form #lastButtons #finishBtn {
+  padding: 0.6em 9em;
+  margin: 0.5em 0em 0em 8.7em;
   color: #fff;
   background-color: #b59e3c;
   border: none;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 1320px) {
+  section .selectRoom .searchDrop {
+    width: 52em;
+  }
+  section .selectRoom .searchDrop ul .changeSearch {
+    margin-left: 1.5em;
+  }
   section .singapure {
     width: 1000px;
     height: 410px;
@@ -231,35 +527,166 @@ section #finishBook form ul li #finishBtn {
   section #roomsList .Room {
     margin: 0.5em 7em;
   }
+  section #finishBook {
+    width: 66em;
+  }
 }
 
 @media only screen and (max-width: 1028px) {
+  section .selectRoom .searchDrop {
+    width: 42.5em;
+  }
+  section .selectRoom .searchDrop ul {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .selectRoom .searchDrop ul li {
+    margin: 0.2em 0em;
+    padding: 0em 0em;
+  }
+  section .selectRoom .searchDrop ul .changeSearch {
+    margin-left: 0em;
+  }
+  section .selectRoom #searchForm ul {
+    margin-left: 2.2em;
+  }
+  section .selectRoom #searchForm ul li {
+    font-size: 0.8em;
+  }
+  section .selectRoom #searchForm ul li div {
+    margin-right: 0em;
+  }
+  section .selectRoom #searchForm ul li #searchBtn {
+    margin-left: 2.3em;
+    padding: 0.6em 11em;
+  }
   section .singapure {
     width: 820px;
     height: 335px;
   }
   section #roomsList .Room {
-    margin: 0.5em 1em;
+    margin: 0.5em 3em;
+  }
+  section #finishBook {
+    width: 54.2em;
+  }
+  section #finishBook #finishBooking h1 {
+    text-align: center;
+    margin-left: 0em;
+  }
+  section #finishBook #finishBooking .hotelCountry {
+    margin-left: -3em;
+  }
+  section #finishBook #finishBooking .otherHotel {
+    margin-left: -1.8em;
+  }
+  section #finishBook #finishBooking .totalPrice {
+    margin-left: 2em;
+  }
+  section #finishBook #finishBooking ul {
+    margin-left: 0em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo {
+    margin-left: -4.5em;
+    width: 28em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .payInfo {
+    font-size: 1.1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .reserveCard {
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 840px) {
+  section .selectRoom .searchDrop {
+    width: 35.5em;
+  }
+  section .selectRoom .searchDrop ul {
+    margin: 0.2em;
+  }
+  section .selectRoom .searchDrop ul li {
+    margin: 0.1em 0em;
+  }
   section .singapure {
     width: 680px;
     height: 300px;
   }
   section #roomsList .Room {
-    margin: 0.5em 0.2em;
+    margin: 0.5em 1em;
+  }
+  section #finishBook {
+    /* margin-top: 7.5em; */
+    width: 43em;
+  }
+  section #finishBook #finishBooking h1 {
+    text-align: center;
+    margin-left: 0em;
+  }
+  section #finishBook #finishBooking .hotelCountry {
+    margin-left: -5em;
+  }
+  section #finishBook #finishBooking .otherHotel {
+    margin-left: -3.8em;
+  }
+  section #finishBook #finishBooking .totalPrice {
+    margin-left: 0.5em;
+  }
+  section #finishBook #finishBooking ul {
+    margin-left: -2em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo {
+    margin-left: -8.5em;
+    width: 24.5em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .payInfo {
+    font-size: 1.1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .reserveCard {
+    font-size: 1em;
+  }
+  section #finishBook #finishBooking .checkBox {
+    margin-left: 5.5em;
+  }
+  section #finishBook #finishBooking #lastButtons {
+    margin-left: -3.3em;
+    margin-right: 0em;
+  }
+  section #finishBook #finishBooking #lastButtons #finishBtn {
+    font-size: 1.1em;
   }
 }
 
 @media only screen and (max-width: 700px) {
+  section .selectRoom .searchDrop {
+    width: 31.5em;
+  }
+  section .selectRoom .searchDrop ul {
+    margin: 0.1em;
+  }
+  section .selectRoom .searchDrop ul li {
+    margin: 0.1em -0.5em;
+    padding: 0em 0em;
+  }
+  section .selectRoom .searchDrop ul .changeSearch {
+    margin-left: 0em;
+  }
   section .singapure {
     width: 605px;
     height: 270px;
   }
   section #roomsList .Room {
-    margin: 0.5em 0.2em;
+    margin: 0.5em 0.5em;
+  }
+  section #roomsList .Room ul .roomLeft {
+    margin-top: 1.4em;
   }
   section #roomsList .Room ul .roomCenter {
     display: -webkit-box;
@@ -267,8 +694,8 @@ section #finishBook form ul li #finishBtn {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   section #roomsList .Room ul .roomCenter .center h4 {
     text-align: left;
@@ -277,32 +704,233 @@ section #finishBook form ul li #finishBtn {
   section #roomsList .Room ul .roomCenter .right {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-top: -1em;
   }
   section #roomsList .Room ul .roomCenter .right button {
     margin-left: 2em;
   }
+  section #finishBook {
+    width: 38em;
+  }
+  section #finishBook #finishBooking h1 {
+    text-align: center;
+    margin-left: 0em;
+    font-size: 1.6em;
+  }
+  section #finishBook #finishBooking .hotelCountry {
+    margin-left: 5em;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  section #finishBook #finishBooking .otherHotel {
+    margin-left: -1.8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -0.5em;
+  }
+  section #finishBook #finishBooking .otherHotel li {
+    margin: 0em 0.2em 0em 0.2em;
+    padding: 0em 0.2em;
+    font-size: 1.1em;
+  }
+  section #finishBook #finishBooking .totalPrice {
+    margin-left: 4em;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 0em;
+  }
+  section #finishBook #finishBooking ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: -2em;
+    margin-top: 0em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo {
+    margin-left: 0em;
+    width: 37em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .payInfo {
+    font-size: 1.1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .reserveCard {
+    font-size: 1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .expCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .expCard .month {
+    margin: 0em;
+    font-size: 1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .expCard .year {
+    font-size: 1em;
+    margin: 0.9em 0em 0em 0.5em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo .payForm .secCode {
+    font-size: 1.1em;
+  }
+  section #finishBook #finishBooking ul li div {
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1.3em;
+  }
+  section #finishBook #finishBooking ul li div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0em;
+  }
+  section #finishBook #finishBooking ul li div div input {
+    font-size: 0.7em;
+    width: 8em;
+  }
+  section #finishBook #finishBooking ul li div div label {
+    font-size: 0.7em;
+  }
+  section #finishBook #finishBooking .checkBox {
+    margin-left: 3.5em;
+  }
+  section #finishBook #finishBooking #lastButtons {
+    margin-left: -5.5em;
+    margin-right: 0em;
+  }
+  section #finishBook #finishBooking #lastButtons #finishBtn {
+    font-size: 1.1em;
+  }
 }
 
 @media only screen and (max-width: 630px) {
+  section .selectRoom .searchDrop {
+    width: 27.5em;
+  }
+  section .selectRoom .searchDrop ul {
+    font-size: 0.9em;
+  }
+  section .selectRoom .searchDrop ul li {
+    margin: 0.1em 0em;
+    padding: 0em 0em;
+  }
+  section .selectRoom .searchDrop ul .changeSearch {
+    margin-left: 0em;
+  }
   section .singapure {
     width: 530px;
     height: 240px;
   }
-  section .selectRoom form ul li div {
-    margin-right: 2em;
+  section #roomsList .Room {
+    margin: 0.5em 0.5em;
   }
-  section .selectRoom form ul li #searchBtn {
-    margin-left: 0em;
-    padding: 0.6em 11em;
+  section #roomsList .Room ul .roomLeft {
+    margin-top: 2.4em;
+  }
+  section #finishBook {
+    width: 33em;
+  }
+  section #finishBook #finishBooking .hotelCountry {
+    margin-left: 2.5em;
+    margin-top: -0.3em;
+  }
+  section #finishBook #finishBooking ul {
+    margin-left: -1em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo {
+    width: 30em;
+  }
+  section #finishBook #finishBooking ul li div {
+    font-size: 1.2em;
+  }
+  section #finishBook #finishBooking .checkBox {
+    margin-left: 3em;
+  }
+  section #finishBook #finishBooking #lastButtons {
+    margin-left: -5.5em;
+  }
+  section #finishBook #finishBooking #lastButtons #finishBtn {
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 550px) {
+  section .selectRoom .searchDrop {
+    width: 25em;
+  }
+  section .selectRoom .searchDrop ul {
+    font-size: 0.9em;
+  }
+  section .selectRoom .searchDrop ul li {
+    margin: 0.1em -0.7em;
+    padding: 0em 0em;
+  }
+  section .selectRoom .searchDrop ul .changeSearch {
+    margin-left: 0em;
+  }
   section .singapure {
     width: 470px;
     height: 220px;
   }
+  section #finishBook {
+    width: 31em;
+  }
+  section #finishBook #finishBooking .hotelCountry {
+    margin-left: 1.5em;
+  }
+  section #finishBook #finishBooking ul {
+    margin-left: -1.3em;
+  }
+  section #finishBook #finishBooking ul .paymentInfo {
+    margin-left: -0.5em;
+    width: 29.5em;
+  }
+  section #finishBook #finishBooking .checkBox {
+    margin-left: 1.7em;
+  }
+  section #finishBook #finishBooking #lastButtons {
+    margin-left: -7.2em;
+  }
 }
+/*# sourceMappingURL=Hotels.css.map */

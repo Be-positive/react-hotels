@@ -50,6 +50,10 @@ header form .btn-comments {
   margin-left: 3.3em;
 }
 
+header form .btn-comments button {
+  cursor: pointer;
+}
+
 header form #new-comment {
   margin-top: 1em;
 }
@@ -139,6 +143,7 @@ header .likes .btn2 {
   background-color: #f9fcfb;
   border-radius: 10px;
   margin-left: 1.5em;
+  cursor: pointer;
 }
 
 header .likes .btn {
@@ -147,6 +152,7 @@ header .likes .btn {
   margin-right: 0.2em;
   background-color: #fbffff;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .hideMyComment {

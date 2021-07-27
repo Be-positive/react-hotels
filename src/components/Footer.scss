@@ -4,7 +4,7 @@ footer {
   background-color: #3f3d3d;
   color: rgb(248, 247, 246);
   margin-right: 0em;
-  width: 97vw;
+  width: 100%;
   margin-left: 1em;
   .upper_footer {
     display: flex;
@@ -86,7 +86,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1400px) {
+/* @media only screen and (max-width: 1400px) {
   footer {
     width: 96vw;
     margin-left: 1.3em;
@@ -103,9 +103,9 @@ footer {
     width: 94vw;
     margin-left: 0.6em;
   }
-}
+} */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   footer {
     .upper_footer {
       .left_footer {
@@ -113,19 +113,16 @@ footer {
         margin-left: 1em;
         p {
           display: none;
-        }
-        /* h3 {
-                    font-size: 1.2em;
-                }  */
+        }        
       }
       .right_footer {
         width: 60%;
       }
     }
   }
-}
+} */
 
-@media only screen and (max-width: 580px) {
+/* @media only screen and (max-width: 580px) {
   footer {
     width: 94vw;
     margin-left: 0.3em;
@@ -147,3 +144,4 @@ footer {
     }
   }
 }
+ */

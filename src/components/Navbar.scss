@@ -84,7 +84,8 @@ nav {
         margin-bottom: 20.8em;
         padding: 1em 2.6em;
         transform: translate3d(200vw, 0, 0);
-        transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+        transition: 1s;
+        transition-timing-function: ease-out-in;
         border: none;
         cursor: pointer;
       }
@@ -97,7 +98,8 @@ nav {
         /* top: 5.1em;
         left: 25.4em; */
         transform: translate3d(200vw, 0, 0);
-        transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+        transition: 1s;
+        transition-timing-function: ease-out-in;
         margin-top: 4.7em;
         margin-right: 0em;
         ul {

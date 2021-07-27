@@ -23,4 +23,37 @@ section h4 {
   font-family: "Gotham-light", Arial, sans-serif;
   color: #b59e3c;
 }
+
+Footer {
+  margin-left: 0.5em;
+  width: 99vw;
+}
+
+@media only screen and (max-width: 1508px) {
+  Footer {
+    margin-left: 0.7em;
+    width: 98vw;
+  }
+}
+
+@media only screen and (max-width: 908px) {
+  Footer {
+    margin-left: 0.8em;
+    width: 97vw;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  Footer {
+    margin-left: 0.8em;
+    width: 96vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  Footer {
+    margin-left: 0em;
+    width: 98.5vw;
+  }
+}
 /*# sourceMappingURL=Job.css.map */
