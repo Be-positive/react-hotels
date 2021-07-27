@@ -6,11 +6,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 section .singapure {
@@ -28,8 +28,8 @@ section .selectRoom {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 section .selectRoom h1 {
@@ -53,8 +53,8 @@ section .selectRoom form ul li {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 section .selectRoom form ul li div {
@@ -65,8 +65,8 @@ section .selectRoom form ul li div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 1.3em;
 }
 
@@ -87,8 +87,8 @@ section #roomsList {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-top: 3em;
 }
 
@@ -98,8 +98,8 @@ section #roomsList .Room {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: black solid 0.1em;
   margin: 0.5em 12em;
 }
@@ -111,8 +111,8 @@ section #roomsList .Room ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 section #roomsList .Room ul .roomLeft {
@@ -127,8 +127,8 @@ section #roomsList .Room ul .roomCenter {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 section #roomsList .Room ul .roomCenter .center {
@@ -151,11 +151,11 @@ section #roomsList .Room ul .roomCenter .right {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 section #roomsList .Room ul .roomCenter .right h4 {
@@ -195,8 +195,8 @@ section #finishBook form ul li {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 section #finishBook form ul li div {
@@ -207,8 +207,8 @@ section #finishBook form ul li div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 1.3em;
 }
 
@@ -267,8 +267,8 @@ section #finishBook form ul li #finishBtn {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   section #roomsList .Room ul .roomCenter .center h4 {
     text-align: left;
@@ -277,8 +277,8 @@ section #finishBook form ul li #finishBtn {
   section #roomsList .Room ul .roomCenter .right {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-top: -1em;
   }
   section #roomsList .Room ul .roomCenter .right button {
@@ -306,4 +306,3 @@ section #finishBook form ul li #finishBtn {
     height: 220px;
   }
 }
-/*# sourceMappingURL=Rooms.css.map */

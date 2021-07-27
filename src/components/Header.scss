@@ -30,6 +30,9 @@ header {
     }
     .btn-comments {
       margin-left: 3.3em;
+      button {
+        cursor: pointer;
+      }
     }
     #new-comment {
       margin-top: 1em;
@@ -96,6 +99,7 @@ header {
       background-color: rgb(249, 252, 251);
       border-radius: 10px;
       margin-left: 1.5em;
+      cursor: pointer;
     }
     .btn {
       margin-top: 1em;
@@ -103,6 +107,7 @@ header {
       margin-right: 0.2em;
       background-color: rgb(251, 255, 255);
       border-radius: 10px;
+      cursor: pointer;
     }
   }
 }

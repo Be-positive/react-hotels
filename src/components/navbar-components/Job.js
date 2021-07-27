@@ -1,5 +1,6 @@
 import React from 'react'
 import './Job.scss'
+import Footer from '../Footer'
 
 function Job() {
     return (
@@ -10,6 +11,8 @@ function Job() {
           <h4>Oops, vacancies not exist now, but we will post them soon... </h4>
         
         </section>
+
+        <Footer />
         
         </>
     )

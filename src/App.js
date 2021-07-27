@@ -5,11 +5,13 @@ import Navbar from './components/Navbar';
 import Header from './components/Header'
 import Countries from './components/Countries';
 import Bitcoin from './components/Bitcoin'
+import Footer from './components/Footer'
 
 import About from './components/navbar-components/About'
 import Job from './components/navbar-components/Job'
-import Rooms from './components/navbar-components/Rooms'
+import Hotels from './components/navbar-components/Hotels'
 import Error from './components/navbar-components/Error'
+
 
 import { 
   BrowserRouter as Router, Switch, Route,
@@ -27,7 +29,9 @@ function App() {
 
           <Countries/>
 
-         <Bitcoin /> 
+          <Bitcoin />
+
+          <Footer /> 
 
           </Route>
           <Route path="/about">
@@ -36,8 +40,8 @@ function App() {
           <Route path="/job">
             <Job />            
           </Route>
-          <Route path="/rooms">
-            <Rooms />            
+          <Route path="/hotels">
+            <Hotels />            
           </Route>
           <Route path="*">
             <Error />

@@ -76,6 +76,7 @@ const Navbar = () => {
         closeBtn1.style.transform = 'translate3d(0vw, 0, 0)'                                  
         let btnBook1 = document.getElementById('bookingForm')              
         btnBook1.style.transform = 'translate3d(0vw, 0, 0)'
+        
         /* btnBook1.classList.add('show') */
         if(window.innerWidth<=840){
             setMenu(false)                      
@@ -97,6 +98,8 @@ const Navbar = () => {
         closeBtn3.style.transform = 'translate3d(200vw, 0, 0)'                                          
         let btnBook3 = document.getElementById('bookingForm')               
         btnBook3.style.transform = 'translate3d(200vw, 0, 0)'
+        const adultInfo = document.getElementById('adult')
+        console.log(adultInfo.valueAsNumber)
     }
 
     const handleSubmit = (e) => {
@@ -131,8 +134,8 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/rooms' className='nav-links' >
-                                Rooms
+                            <Link to='/hotels' className='nav-links' >
+                                Hotels
                             </Link>
                         </li>                                          
                                         
@@ -178,7 +181,7 @@ const Navbar = () => {
                                 </li>                                                      
                                 <li>
                                     <button id="hideBtn" onClick={bookButton} >
-                                        <Link className="booking" to='/rooms'>BOOK</Link>
+                                        <Link className="booking" to='/hotels'>BOOK</Link>
                                     </button>
                                 </li>
                             </ul>

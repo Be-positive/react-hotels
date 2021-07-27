@@ -1,0 +1,771 @@
+section {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-left: 0em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .singapure {
+    margin-left: 0.3em;
+  }
+  h1 {
+    margin-top: 6.5em;
+    text-align: center;
+  }
+  .selectRoom {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin: 2em 0em -1em 0em;
+      text-align: center;
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 24px;
+      color: #707372;
+    }
+    .searchDrop {
+      margin-top: 2em;
+      background-color: #3f3d3d;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 58em;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+
+        .changeSearch {
+          text-align: right;
+          margin-left: 7.5em;
+        }
+
+        li {
+          margin: 0em 0.2em 0em 0.3em;
+          color: #fff;
+
+          i {
+            border: #fff solid 0.1em;
+            padding: 0.2em;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          ul {
+            display: flex;
+            flex-direction: row;
+            li {
+              margin: 0em 0.5em 0em 0.5em;
+              border-left: 0.1em solid white;
+              color: #fff;
+              padding-left: 0.5em;
+            }
+          }
+        }
+      }
+      #searchForm {
+        width: 100%;
+        background-color: #3f3d3d;
+        color: #fff;
+        visibility: hidden;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-3em);
+        z-index: -1;
+        transition: all 0.3s ease 0s, visibility 0s linear 0.3s,
+          z-index 0s linear 0.01s;
+        ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            display: flex;
+            flex-direction: row;
+            div {
+              margin-right: 2em;
+              margin-bottom: 1em;
+              display: flex;
+              flex-direction: column;
+              font-size: 1.3em;
+            }
+            #searchBtn {
+              font-family: "Gotham-light", Arial, sans-serif;
+              padding: 0.6em 10em;
+              margin: 0em 2.5em 0.5em 0em;
+              color: #fff;
+              background-color: #b59e3c;
+              border: none;
+              font-size: 1em;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  #roomsList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    .Room {
+      display: flex;
+      flex-direction: row;
+      border: black solid 0.1em;
+      margin: 0.5em 12em;
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        .roomLeft {
+          margin-left: -2em;
+          margin-right: 1em;
+        }
+        .roomCenter {
+          margin-top: 0em;
+          display: flex;
+          flex-direction: row;
+          .center {
+            margin-right: 0em;
+            h3 {
+              margin-top: 0em;
+              margin-bottom: 0.5em;
+            }
+            p {
+              margin: 0em 0em;
+            }
+          }
+          .right {
+            margin: 0em 0.5em 0em 0.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+              color: black;
+              font-size: 1em;
+              text-align: center;
+            }
+            button {
+              font-family: "Gotham-light", Arial, sans-serif;
+              padding: 0.7em 0.5em;
+              color: #fff;
+              background-color: #b59e3c;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  #finishBook {
+    font-family: "Canto Roman";
+    position: fixed;
+    display: none;
+    z-index: 1;
+    width: 81.5em;
+    height: 90vh;
+    margin-top: 5.7em;
+    form {
+      width: 100%;
+      background-color: #3f3d3d;
+      color: #fff;
+      h1 {
+        font-size: 2em;
+        margin-top: 0.5em;
+        text-align: left;
+        margin-left: 1.5em;
+      }
+      .hotelCountry {
+        text-align: left;
+        margin-left: -1em;
+        display: flex;
+        flex-direction: row;
+        color: #b59e3c;
+        #hotelInfo {
+          margin-right: -3em;
+        }
+
+        h3 {
+          font-size: 1.5em;
+          margin-top: 0em;
+          border-right: 0.1em solid #b59e3c;
+          padding: 0em 0.5em;
+        }
+      }
+      .otherHotel {
+        display: flex;
+        flex-direction: row;
+        /* background-color: royalblue; */
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0.2em;
+        margin-top: 0em;
+
+        li {
+          margin: 0em 0.5em 0em 0.5em;
+          border-right: 0.1em solid white;
+          color: #fff;
+          padding: 0em 1em;
+          display: flex;
+          flex-direction: row;
+          font-size: 1.2em;
+        }
+      }
+      .totalPrice {
+        margin-top: 1.5em;
+        text-align: left;
+        color: #b59e3c;
+        margin-left: 3.7em;
+        font-size: 1.2em;
+        #priceRoom {
+          text-decoration: underline;
+        }
+      }
+      ul {
+        margin-top: 2em;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        margin-left: 2em;
+        .paymentInfo {
+          background-color: #4e4941;
+          .payForm {
+            margin-left: 1em;
+            display: flex;
+            flex-direction: column;
+
+            .payInfo {
+              color: bisque;
+              font-size: 1.3em;
+              font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+            .reserveCard {
+              font-size: 1.1em;
+            }
+            p {
+              margin-top: -0.6em;
+              color: rgb(141, 129, 111);
+              font-size: 0.8em;
+            }
+            .allFields {
+              color: #fff;
+              margin-top: 0em;
+              margin-bottom: 1.5em;
+              font-size: 0.9em;
+            }
+            .card {
+              font-size: 1.2em;
+              input {
+                font-size: 1.2em;
+              }
+            }
+            .expCard {
+              display: flex;
+              flex-direction: row;
+              .month {
+                margin-top: 0em;
+                font-size: 0.9em;
+                width: 7em;
+              }
+              .year {
+                margin-top: 0.9em;
+                margin-left: -2.5em;
+                font-size: 0.9em;
+              }
+            }
+            .secCode {
+              margin-top: -0.5em;
+              font-size: 1.1em;
+            }
+          }
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+
+          div {
+            margin-right: 3em;
+            margin-bottom: 0.5em;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.3em;
+            div {
+              display: flex;
+              flex-direction: column;
+              margin-top: 0em;
+              input {
+                font-size: 1em;
+                width: 10em;
+              }
+              label {
+                font-size: 0.7em;
+              }
+            }
+          }
+        }
+      }
+      .checkBox {
+        margin-left: 11em;
+        margin-bottom: 1em;
+        label {
+          span {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      #lastButtons {
+        display: flex;
+        flex-direction: row;
+        #finishBtn {
+          padding: 0.6em 9em;
+          margin: 0.5em 0em 0em 8.7em;
+          color: #fff;
+          background-color: #b59e3c;
+          border: none;
+          font-size: 1.2em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 52em;
+        ul {
+          .changeSearch {
+            margin-left: 1.5em;
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 1000px;
+      height: 410px;
+    }
+    #roomsList {
+      .Room {
+        margin: 0.5em 7em;
+      }
+    }
+    #finishBook {
+      width: 66em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 42.5em;
+        ul {
+          text-align: center;
+          align-items: center;
+          padding: 0em;
+          flex-direction: column;
+          li {
+            margin: 0.2em 0em;
+            padding: 0em 0em;
+          }
+          .changeSearch {
+            margin-left: 0em;
+          }
+        }
+      }
+      #searchForm {
+        ul {
+          margin-left: 2.2em;
+          li {
+            font-size: 0.8em;
+            div {
+              margin-right: 0em;
+            }
+            #searchBtn {
+              margin-left: 2.3em;
+              padding: 0.6em 11em;
+            }
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 820px;
+      height: 335px;
+    }
+    #roomsList {
+      .Room {
+        margin: 0.5em 3em;
+      }
+    }
+    #finishBook {
+      width: 54.2em;
+      #finishBooking {
+        h1 {
+          text-align: center;
+          margin-left: 0em;
+        }
+        .hotelCountry {
+          margin-left: -3em;
+        }
+        .otherHotel {
+          margin-left: -1.8em;
+        }
+        .totalPrice {
+          margin-left: 2em;
+        }
+        ul {
+          margin-left: 0em;
+          .paymentInfo {
+            margin-left: -4.5em;
+            width: 28em;
+            .payForm {
+              .payInfo {
+                font-size: 1.1em;
+              }
+              .reserveCard {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 840px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 35.5em;
+        ul {
+          margin: 0.2em;
+
+          li {
+            margin: 0.1em 0em;
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 680px;
+      height: 300px;
+    }
+    #roomsList {
+      .Room {
+        margin: 0.5em 1em;
+      }
+    }
+    #finishBook {
+      /* margin-top: 7.5em; */
+      width: 43em;
+      #finishBooking {
+        h1 {
+          text-align: center;
+          margin-left: 0em;
+        }
+        .hotelCountry {
+          margin-left: -5em;
+        }
+        .otherHotel {
+          margin-left: -3.8em;
+        }
+        .totalPrice {
+          margin-left: 0.5em;
+        }
+        ul {
+          margin-left: -2em;
+          .paymentInfo {
+            margin-left: -8.5em;
+            width: 24.5em;
+            .payForm {
+              .payInfo {
+                font-size: 1.1em;
+              }
+              .reserveCard {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+        .checkBox {
+          margin-left: 5.5em;
+        }
+        #lastButtons {
+          margin-left: -3.3em;
+          margin-right: 0em;
+          #finishBtn {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 31.5em;
+        ul {
+          margin: 0.1em;
+          li {
+            margin: 0.1em -0.5em;
+            padding: 0em 0em;
+          }
+          .changeSearch {
+            margin-left: 0em;
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 605px;
+      height: 270px;
+    }
+    #roomsList {
+      .Room {
+        margin: 0.5em 0.5em;
+        ul {
+          .roomLeft {
+            margin-top: 1.4em;
+          }
+          .roomCenter {
+            display: flex;
+            flex-direction: column;
+            .center {
+              h4 {
+                text-align: left;
+                margin-top: 0.5em;
+              }
+            }
+            .right {
+              flex-direction: row;
+              margin-top: -1em;
+              button {
+                margin-left: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
+    #finishBook {
+      width: 38em;
+      #finishBooking {
+        h1 {
+          text-align: center;
+          margin-left: 0em;
+          font-size: 1.6em;
+        }
+        .hotelCountry {
+          margin-left: 5em;
+          font-size: 0.9em;
+          text-align: center;
+        }
+        .otherHotel {
+          margin-left: -1.8em;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: -0.5em;
+
+          li {
+            margin: 0em 0.2em 0em 0.2em;
+            padding: 0em 0.2em;
+            font-size: 1.1em;
+          }
+        }
+        .totalPrice {
+          margin-left: 4em;
+          text-align: center;
+          font-size: 1.1em;
+          margin-top: 0em;
+        }
+        ul {
+          flex-direction: column;
+          margin-left: -2em;
+          margin-top: 0em;
+          .paymentInfo {
+            margin-left: 0em;
+            width: 37em;
+            display: flex;
+            flex-direction: column;
+            .payForm {
+              display: flex;
+              flex-direction: column;
+              .payInfo {
+                font-size: 1.1em;
+              }
+              .reserveCard {
+                font-size: 1em;
+              }
+              .expCard {
+                display: flex;
+                flex-direction: row;
+                .month {
+                  margin: 0em;
+                  font-size: 1em;
+                }
+                .year {
+                  font-size: 1em;
+                  margin: 0.9em 0em 0em 0.5em;
+                }
+              }
+              .secCode {
+                font-size: 1.1em;
+              }
+            }
+          }
+          li {
+            div {
+              margin-right: 1em;
+              margin-bottom: 0.5em;
+              flex-direction: row;
+              font-size: 1.3em;
+              div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0em;
+                input {
+                  font-size: 0.7em;
+                  width: 8em;
+                }
+                label {
+                  font-size: 0.7em;
+                }
+              }
+            }
+          }
+        }
+        .checkBox {
+          margin-left: 3.5em;
+        }
+        #lastButtons {
+          margin-left: -5.5em;
+          margin-right: 0em;
+          #finishBtn {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 630px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 27.5em;
+        ul {
+          font-size: 0.9em;
+          li {
+            margin: 0.1em 0em;
+            padding: 0em 0em;
+          }
+          .changeSearch {
+            margin-left: 0em;
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 530px;
+      height: 240px;
+    }
+    #roomsList {
+      .Room {
+        margin: 0.5em 0.5em;
+        ul {
+          .roomLeft {
+            margin-top: 2.4em;
+          }
+        }
+      }
+    }
+    #finishBook {
+      width: 33em;
+      #finishBooking {
+        .hotelCountry {
+          margin-left: 2.5em;
+          margin-top: -0.3em;
+        }
+        ul {
+          margin-left: -1em;
+          .paymentInfo {
+            width: 30em;
+          }
+          li {
+            div {
+              font-size: 1.2em;
+            }
+          }
+        }
+        .checkBox {
+          margin-left: 3em;
+        }
+        #lastButtons {
+          margin-left: -5.5em;
+
+          #finishBtn {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 550px) {
+  section {
+    .selectRoom {
+      .searchDrop {
+        width: 25em;
+        ul {
+          font-size: 0.9em;
+          li {
+            margin: 0.1em -0.7em;
+            padding: 0em 0em;
+          }
+          .changeSearch {
+            margin-left: 0em;
+          }
+        }
+      }
+    }
+    .singapure {
+      width: 470px;
+      height: 220px;
+    }
+    #finishBook {
+      width: 31em;
+      #finishBooking {
+        .hotelCountry {
+          margin-left: 1.5em;
+        }
+        ul {
+          margin-left: -1.3em;
+          .paymentInfo {
+            margin-left: -0.5em;
+            width: 29.5em;
+          }
+        }
+        .checkBox {
+          margin-left: 1.7em;
+        }
+        #lastButtons {
+          margin-left: -7.2em;
+        }
+      }
+    }
+  }
+}

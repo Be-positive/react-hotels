@@ -107,6 +107,10 @@ const UseStateMain = () => {
             return data[3] = newComments; 
         } else {return data[4] = newComments}            
     } */
+
+    const addComment = (e) => {
+        e.preventDefault()       
+    }
           
     return (
         
@@ -119,7 +123,7 @@ const UseStateMain = () => {
                 {/* <button className='btn2' onClick={showUp}> Comments <i className="fas fa-comment"></i> </button> */}       
                 <button className='btn2' onClick={clickHand}> Comments <i className="fas fa-comment"></i> </button>       
             </div>
-            <form action="#" id="comments" style={{display:'none'}}>
+            <form action="#" id="comments" style={{display:'none'}} onSubmit={addComment}>
                 <div className="myComment">
                     <img src={Image5} alt="" height='50px' width='40px' style ={{borderRadius:'20%'}} />
                     <label htmlFor="comment"></label>
