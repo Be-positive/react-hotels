@@ -1,0 +1,48 @@
+.cookie {
+  position: fixed;
+  z-index: 1002;
+  width: 100%;  
+  bottom: 0;
+  background-color: #f1eee8;
+  display: flex;
+  border: 2px solid black;
+  .cookieText{
+    margin: 2em;
+  }
+  .twoButtonsCo{
+    margin-right: 2em;
+    display: flex; 
+    margin: 2em;
+          
+    .firstButton{
+      border: none;
+      background: none;
+      cursor: pointer;
+    }        
+    .secondButton{
+      background-color: #b59e3c;
+      cursor: pointer;
+      &:hover {
+        color: #b59e3c;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+
+// @media only screen and (max-width: 1028px) {
+//   footer {
+//     .navbar-container {      
+//       margin: 10px;
+    
+//     }
+//   }
+// }
+
+
+
+
+
+
+

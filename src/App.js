@@ -7,51 +7,41 @@ import Countries from './components/Countries';
 import Bitcoin from './components/Bitcoin'
 import Footer from './components/Footer'
 
+//Navabar buttens
 import About from './components/navbar-components/About'
 import Job from './components/navbar-components/Job'
 import Hotels from './components/navbar-components/Hotels'
 import Error from './components/navbar-components/Error'
 
+//fixed Cookie
+import Cookie from './components/Cookie/Cookie'; 
 
-import { 
-  BrowserRouter as Router, Switch, Route,
+// new, using the same in v6 version of react-router-dom
+import {
+  BrowserRouter,
+  Routes,
+  Route,  
 } from "react-router-dom";
-
 
 function App() {
   return (
     <div>
-      <Router>
+      <BrowserRouter>
         <Navbar />
-        <Switch>
-          <Route exact path="/">
-          <Header />
+        <Cookie/>
+        <Routes>          
+          <Route path="/" element={<><Header /><Countries /><Bitcoin /><Footer/></>}></Route>
 
-          <Countries/>
-
-          <Bitcoin />
-
-          <Footer /> 
-
+          <Route path="/about" element={<About />}>
           </Route>
-          <Route path="/about">
-            <About />            
+          <Route path="/job" element={<Job />}>
           </Route>
-          <Route path="/job">
-            <Job />            
+          <Route path="/hotels" element={<Hotels />}>
           </Route>
-          <Route path="/hotels">
-            <Hotels />            
+          <Route path="*" element={<Error />}>
           </Route>
-          <Route path="*">
-            <Error />
-          </Route>
-        </Switch>
-        
-      </Router>      
-      
-     
-
+        </Routes>                
+      </BrowserRouter>  
       
     </div>
   );
