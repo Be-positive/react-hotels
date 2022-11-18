@@ -7,24 +7,29 @@
   display: flex;
   border: 2px solid black;
   .cookieText{
-    margin: 2em;
+    margin: 1em;
+    margin-left: 3em;
   }
   .twoButtonsCo{
-    margin-right: 2em;
+    margin: 1em;
     display: flex; 
-    margin: 2em;
-          
+    margin: 2em;          
     .firstButton{
       border: none;
       background: none;
       cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
     }        
     .secondButton{
       background-color: #b59e3c;
-      cursor: pointer;
+      color: #fff;
+      cursor: pointer;      
+      display: block;        
+      transition: background-color 1s, transform 1s;          
       &:hover {
-        color: #b59e3c;
-        background-color: #fff;
+        background-color: #6e6022;
       }
     }
   }

@@ -106,7 +106,6 @@ const Navbar = () => {
         e.preventDefault()                        
     }
     //prevent default - prevent Default behavior we doing how i want! 
-         
 
     return (
         <React.Fragment>
@@ -140,7 +139,7 @@ const Navbar = () => {
                         </li>                                          
                                         
                     </ul>
-                    <button id="btnBook" /* className='btnBooking'  */onClick={boockClick} >BOOK ONLINE</button>
+                    <button id="btnBook" onClick={boockClick} >BOOK ONLINE</button>
                     <div className='formBook'>
                         <button id='closeBooking' onClick={finishBook}>CLOSE</button>
                         <form id='bookingForm' action="#" onSubmit={handleSubmit}>
@@ -185,21 +184,8 @@ const Navbar = () => {
                                     </button>
                                 </li>
                             </ul>
-                           
-                          
-
-                           
-                           
-
-                          
-                           
-                           
                         </form>                        
                     </div>
-                
-
-
-
                 </div>                          
             </nav>                                  
         </React.Fragment>

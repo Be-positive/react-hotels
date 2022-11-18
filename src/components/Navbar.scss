@@ -61,9 +61,10 @@ nav {
       background-color: #b59e3c;
       border: none;
       cursor: pointer;
+      display: block;        
+      transition: background-color 1s, transform 1s;          
       &:hover {
-        color: #b59e3c;
-        background-color: #fff;
+        background-color: #6e6022;
       }
     }
     .formBook {
@@ -156,12 +157,15 @@ nav {
               background-color: #b59e3c;
               border: none;
               font-size: 1em;
+              display: block;        
+              transition: background-color 1s, transform 1s; 
+              cursor: pointer;         
+              &:hover {
+                background-color: #6e6022;
+              }
               .booking {
                 text-decoration: none;
                 color: #fff;
-                &:hover {
-                  text-decoration: underline;
-                }
               }
             }
           }

@@ -3,17 +3,13 @@ footer {
   font-family: Courier New, monospace;
   background-color: #3f3d3d;
   color: rgb(248, 247, 246);
-  margin-right: 0em;
   width: 100%;
-  margin-left: 1em;
   .upper_footer {
     display: flex;
 
     .left_footer {
       display: flex;
       width: 50%;
-      /* flex-wrap: wrap;
-            align-content: stretch; */
       margin-left: 2em;
       flex-direction: column;
       justify-content: stretch;
