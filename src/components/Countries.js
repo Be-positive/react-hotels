@@ -1,20 +1,20 @@
-import React, {useEffect, useState} from 'react'
+// import React, {useEffect, useState} from 'react'
 import './Countries.scss';
 
-const url = "https://restcountries.eu/rest/v2/all"
+// const url = "https://restcountries.eu/rest/v2/all"
 
 const useEffectCountries = () => {   
 
-  const [country, setCountry] = useState([]);
+  // const [country, setCountry] = useState([]);
 
-  const getCountries = async () => {
-    const response = await fetch(url);
-    const country = await response.json();
-    setCountry(country);    
-  };
-  useEffect(() => {
-    getCountries();
-  }, []);
+  // const getCountries = async () => {
+  //   const response = await fetch(url);
+  //   const country = await response.json();
+  //   setCountry(country);    
+  // };
+  // useEffect(() => {
+  //   getCountries();
+  // }, []);
 
   const showUp  = () => {                
     let hotels = document.getElementById('hotelList')
@@ -40,19 +40,12 @@ const useEffectCountries = () => {
         <>
         <main>
             <h2>Top hotels in South-Eastern Asia</h2>
-            <ul className='countries'>
-                {/* {country.filter( country => country.subregion  === "South-Eastern Asia" && name.length < 10)} */}
+            {/* <ul className='countries'>
                 {country.map((user) => {
                      const { name, area, flag, subregion} = user;
-                     if(subregion === "South-Eastern Asia" && name.length <= 20){
-                      /* let takeId = Math.floor(Math.random() * 999) + 1 */
-                      /* let takeId = () => {
-                        for (let i=0; i<=7; i++){
-                        return i;
-                        }
-                      } */
+                     if(subregion === "South-Eastern Asia" && name.length <= 20){                      
                         return (                            
-                            <li key={area} /* id={takeId} */>
+                            <li key={area}>
                             <div>
                                 <img src={flag} alt="" width="50px" height="40px" />
                                 <h4>{name}</h4>
@@ -62,7 +55,7 @@ const useEffectCountries = () => {
                         );
                     } return null                    
                 })}
-            </ul>
+            </ul> */}
             <div className="btnHotels">
               <button onClick={hotelsPrice}>Hotels and Prices</button>
             </div>

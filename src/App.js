@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header'
 import Countries from './components/Countries';
-import Bitcoin from './components/Bitcoin'
+// import Bitcoin from './components/Bitcoin'
 import Footer from './components/Footer'
 
 //Navabar buttens
@@ -30,7 +30,7 @@ function App() {
         <Navbar />
         <Cookie/>
         <Routes>          
-          <Route path="/" element={<><Header /><Countries /><Bitcoin /><Footer/></>}></Route>
+          <Route path="/" element={<><Header /><Countries /><Footer/></>}></Route>
 
           <Route path="/about" element={<About />}>
           </Route>
