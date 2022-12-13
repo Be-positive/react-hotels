@@ -15,6 +15,15 @@ const useEffectCountries = () => {
   // useEffect(() => {
   //   getCountries();
   // }, []);
+  const request = require('request-promise');
+
+request('https://api.ipbase.com/v2/info?apikey=YOUR-APIKEY')
+.then(response => {
+    console.log(response)
+})
+.catch(error => {
+    console.log(error)
+})
 
   const showUp  = () => {                
     let hotels = document.getElementById('hotelList')
