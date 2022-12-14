@@ -3,17 +3,20 @@
   align-items: center;
   flex-direction: column;
   margin-top: 2em;
-  h2 {
+  font-family: Avenir,sans-serif;
+  h3 {
     span {
       a {
         color: #b59e3c;
       }
     }
   }
-  h3 {
+  h4 {
     margin-top: -0.801em;
+    color: rgb(104, 105, 100);
   }
   p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Avenir,sans-serif;
+    
   }
 }

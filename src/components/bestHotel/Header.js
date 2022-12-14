@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import Image1 from './images/hotel-thailand3.jpg';
-import Image2 from './images/Olivia.jpg';
-import Image3 from './images/Ksenia.jpg';
-import Image4 from './images/Jone.jpg';
-import Image5 from './images/Mathew.jpg';
-/* import './Main.css';  */
+import Image1 from '../images/hotel-thailand3.jpg';
+import Image2 from '../images/Olivia.jpg';
+import Image3 from '../images/Ksenia.jpg';
+import Image4 from '../images/Jone.jpg';
+import Image5 from '../images/Mathew.jpg';
+
 import './Header.scss'; 
 
 const UseStateMain = () => {
@@ -115,7 +115,8 @@ const UseStateMain = () => {
     return (
         
         <header>
-            <h2>Soneva Kiri Thailand</h2>
+            <h2>The award-winning eco-friendly luxury hotel</h2>
+            <h3>Soneva Kiri Thailand</h3>
             <img className = "mainImage" src={Image1} alt="" /* height='400px' width='620px' */ />
             <div className='likes'>
                 <button className='btn' onClick={clickHandler}><i className="fas fa-heart">COOL</i></button>

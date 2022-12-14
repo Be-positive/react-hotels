@@ -15,15 +15,6 @@ const useEffectCountries = () => {
   // useEffect(() => {
   //   getCountries();
   // }, []);
-  const request = require('request-promise');
-
-request('https://api.ipbase.com/v2/info?apikey=YOUR-APIKEY')
-.then(response => {
-    console.log(response)
-})
-.catch(error => {
-    console.log(error)
-})
 
   const showUp  = () => {                
     let hotels = document.getElementById('hotelList')
@@ -48,7 +39,7 @@ request('https://api.ipbase.com/v2/info?apikey=YOUR-APIKEY')
 
         <>
         <main>
-            <h2>Top hotels in South-Eastern Asia</h2>
+            <h3>Top sustainable hotels in South-Eastern Asia</h3>
             {/* <ul className='countries'>
                 {country.map((user) => {
                      const { name, area, flag, subregion} = user;

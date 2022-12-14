@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './App.css';
-import Navbar from './components/Navbar';
-import Header from './components/Header'
-import Countries from './components/Countries';
-// import Bitcoin from './components/Bitcoin'
-import Footer from './components/Footer'
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/bestHotel/Header'
+import Countries from './components/listCountries/Countries';
+import Bitcoin from './components/Btitcoin/Bitcoin'
+import Footer from './components/Footer/Footer'
 
 //Navabar buttens
 import About from './components/navbar-components/About'
@@ -30,7 +30,7 @@ function App() {
         <Navbar />
         <Cookie/>
         <Routes>          
-          <Route path="/" element={<><Header /><Countries /><Footer/></>}></Route>
+          <Route path="/" element={<><Header /><Countries /><Bitcoin/><Footer/></>}></Route>
 
           <Route path="/about" element={<About />}>
           </Route>

@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import './Hotels.scss'
 /* import Navbar from '../Navbar' */
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
 
 const Hotels = () => {
 /*     const classHotel = () => {

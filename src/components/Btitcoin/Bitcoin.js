@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import './Bitcoin.scss'
 
-const url = 'https://api.cryptonator.com/api/ticker/btc-usd'
+const url = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
 function UseEffectBitcoin() {
     
@@ -26,12 +26,19 @@ function UseEffectBitcoin() {
             }
         })
         .then((bitcoin) => {
-            const { ticker } = bitcoin;
-            setBitcoin(ticker);
+            console.log(bitcoin.disclaimer)
+            console.log(bitcoin.time)
+            console.log(bitcoin.time.updated)
+            console.log(bitcoin.bpi.EUR.rate)
+            console.log(bitcoin.bpi.EUR.code)
+
+            const { disclaimer } = bitcoin;
+            setBitcoin(disclaimer);
             setIsLoading(false);
         })
         .catch((error) => console.log(error))       
    }, [])
+   console.log({bitcoin})
 
    if(isError){
        return (
@@ -52,9 +59,9 @@ function UseEffectBitcoin() {
     return (
         <>
         <div className="bitcoinHead">
-            <h2>Pay via <span> <a target="_blank" rel="noreferrer" href="https://www.bitcoin.com/">Bitcoin</a> </span> anyway and anytime</h2>
-            <h3>safe booking  with current price</h3>
-            <p>Current Bitcoin ({bitcoin.base}) price is about {Math.floor(bitcoin.price)} {bitcoin.target} </p>
+            <h3>Modern option, pay via <span> <a target="_blank" rel="noreferrer" href="https://www.bitcoin.com/">Bitcoin</a> </span> anyway and anytime</h3>
+            <h4>safe booking  with current price</h4>
+            {/* <p>Current Bitcoin price is about {(bitcoin.disclaimer)} </p> */}
         </div>       
         </>
     )

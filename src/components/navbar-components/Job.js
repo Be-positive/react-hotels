@@ -1,6 +1,6 @@
 import React from 'react'
 import './Job.scss'
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
 
 function Job() {
     return (
