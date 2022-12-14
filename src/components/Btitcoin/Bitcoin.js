@@ -9,11 +9,6 @@ function UseEffectBitcoin() {
     const[isError, setIsError] = useState(false)
     const[bitcoin, setBitcoin] = useState([])
     
-/*     const getBitcoin = async () => {
-        const response = await fetch(url)
-        const bitcoin = await response.json()
-        setBitcoin(bitcoin.ticker)        
-    } */
    useEffect(() => {
        fetch(url)
         .then((resp) => {
@@ -25,20 +20,14 @@ function UseEffectBitcoin() {
                 throw new Error(resp.statusText);
             }
         })
-        .then((bitcoin) => {
-            console.log(bitcoin.disclaimer)
-            console.log(bitcoin.time)
-            console.log(bitcoin.time.updated)
-            console.log(bitcoin.bpi.EUR.rate)
-            console.log(bitcoin.bpi.EUR.code)
-
-            const { disclaimer } = bitcoin;
-            setBitcoin(disclaimer);
+        .then((bitcoin) => {  
+            // console.log(bitcoin)
+            setBitcoin(bitcoin);
             setIsLoading(false);
         })
         .catch((error) => console.log(error))       
    }, [])
-   console.log({bitcoin})
+//    console.log({bitcoin})
 
    if(isError){
        return (
@@ -60,8 +49,9 @@ function UseEffectBitcoin() {
         <>
         <div className="bitcoinHead">
             <h3>Modern option, pay via <span> <a target="_blank" rel="noreferrer" href="https://www.bitcoin.com/">Bitcoin</a> </span> anyway and anytime</h3>
-            <h4>safe booking  with current price</h4>
-            {/* <p>Current Bitcoin price is about {(bitcoin.disclaimer)} </p> */}
+            <p>Current price is about {(bitcoin.bpi.EUR.rate)} {(bitcoin.bpi.EUR.code)} </p> 
+            <p id='updTime'>For {(bitcoin.time.updated)}</p>
+            <h4>safe booking  with current Bitcoin price</h4>
         </div>       
         </>
     )
